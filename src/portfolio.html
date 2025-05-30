@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Léa Perraux">
+    <meta property="og:title" content="Portfolio"> 
+    <meta property="og:description" content="Envie de savoir avec qui vous allez travailler ? Venez en apprendre un peu plus sur moi et sur mes projets"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://leaperraux.ovh/projets/janus"> <!--A faire-->
+    <meta property="og:image" content="http://example.com/assets/images/image.jpg"> <!--Trouver une image-->
+    <meta property="og:image:width" content="1800"> <!--Faire la taille de l'image-->
+    <meta property="og:image:height" content="945">
+    <title>Léa Perraux ~ Portfolio</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="scripts/app.js" defer></script>
+</head>
+<body class="portfolio">
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__top">
+                <button id="burgerBtn" class="nav__btn">
+                    <span class="nav__line"></span>
+                    <span class="nav__line"></span>
+                    <span class="nav__line"></span>
+                </button>
+            </div>
+            <ul class="nav__menu"  id="burgerMenu">
+                <li class="nav__item"><a class="nav__link" href="#section1">Projets</a></li>
+                <li class="nav__item"><a class="nav__link" href="#section2">Skills</a></li>
+                <li class="nav__item"><a class="nav__link" href="#section3">Contact</a></li>
+            </ul>
+        </nav>
+        <img class="header__img--paysage mgrid-start1 mgrid-end6" src="assets/images/portfolio/montagne.jpg" srcset="assets/portfolio_compresse/montagne@2x.jpg 2x"> 
+        <div class="grid header__text mgrid-start1 mgrid-end6">
+            <h1 class="mgrid-start1 mgrid-end6 ">Léa</h1>
+            <h2 class="mgrid-start2 mgrid-end5" >Webdesigner solaire et engagée</h2>
+            <img class="header__img mgrid-start2 mgrid-end5" src="assets/images/portfolio/photo_profil.png" srcset="assets/portfolio_compresse/photo_profil@2x.jpg 2x" alt="photo de moi à la mer du nord"> 
+            <p class="mgrid-start1 mgrid-end6">Moi c'est Léa, je conçois des expériences à la fois sensibles, légères et sur mesure, où chaque détail compte. Pour un web plus humain et plus resposable.</p>
+            <a class="insta__btn mgrid-start1 mgrid-end6" href="https://www.instagram.com/loum_dwt?igsh=MWVmOHRmbzR2MW5zaw==" target="_blank">Me contacter</a>
+        </div>
+    </header>
+    <section class="section1" id="section1">
+        <h3>Mes projets</h3>
+        <div class="cartes">
+            <div class="dataplay">
+                <div class="front-face">
+                    <div class="carte dataplay__carte"></div>
+                </div>
+                <div class="back-face">
+                    <p>Venez voir votre premier site éco-responsable. Ce site traite de "la pollution des réseaux sociaux". 
+                    Il s'agit d'un projet de groupe.</p>
+                    <a class="carte__btn" href="/projets/Dataplay/dist/" target="_blank">Voir le projet</a>
+                    <a class="dataplay__casestudy" href="dataplay.html">Voir le case study</a>
+                </div>
+            </div>
+            <div class=" gastrozen">
+                <div class="front-face">
+                    <div class="carte gastrozen__carte"></div>
+                </div>
+                <div class="back-face">
+                    <p>Atteins de SCI ? Ce site est fait pour toi ! Vous pourrez trouver des repas adaptés à vous.Ce site est encore en construction et sera disponible prochainement.</p>
+                    <a class="gastrozen__btn">Voir le projet</a>
+                </div>
+            </div>
+            <div class=" janus">
+            <div class="front-face">
+                    <div class="carte janus__carte"></div>
+                </div>
+                <div class="back-face">
+                    <p>Venez découvrir Amixem sous toutes ses facettes grâce à ce site.
+                    Aucun sujet "tabou", argent, bad buzz, famille,... tout y passe.</p>
+                    <a class="carte__btn" href="/projets/janus/" target="_blank">Voir le projet</a>
+                    <a class="janus__casestudy" href="janus.html">Voir le case study</a>
+                </div> 
+            </div>
+            <div class="phrases">
+                <div class="front-face">
+                    <div class="carte phrases__carte"></div>
+                </div>
+                <div class="back-face">
+                    <p>Vous trouverez ici un site simple avec pour but de faire du design basé sur des phrases aléatoires créées par les 1ère années</p>
+                    <a class="carte__btn" href="/projets/Dataplay/dist/" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+            <div class=" designfiction">
+                <div class="front-face">
+                    <div class="carte designfiction__carte"></div>
+                </div>
+                <div class="back-face">
+                    <p>Et si une lentille révélait vos émotions au monde ? Plongez dans cette technologie et son application dédiées.</p>
+                    <a class="carte__btn" href="/projets/Dataplay/dist/" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section2" id="section2">
+        <h3>Skills and tools</h3>
+        <div class="skills">
+            <div class="skill__ligne1">
+                <div class="Html">
+                    <img class="skills__img" src="assets/images/portfolio/html.png">
+                    <p>HTML</p>
+                </div>
+                <div class="CSS">
+                    <img class="skills__img" src="assets/images/portfolio/css.png">
+                    <p>CSS</p>
+                </div>
+                <div class="Figma">
+                    <img class="skills__img" src="assets/images/portfolio/figma.png">
+                    <p>Figma</p>
+                </div>
+            </div>
+            <div class="skill__ligne2">
+                <div class="js">
+                    <img class="skills__img" src="assets/images/portfolio/javascript.png">
+                    <p>Javascript</p>
+                </div>
+                <div class="json">
+                    <img class="skills__img" src="assets/images/portfolio/json.png">
+                    <p>Json</p>
+                </div>
+                <div class="git">
+                    <img class="skills__img" src="assets/images/portfolio/github.png">
+                    <p>GitHub</p>
+                </div>
+            </div>
+            <div class="skills__texte">
+                <div class="skills__texte1">
+                    <p>Je suis étudiante en Web design à la Haute École Albert Jacquard (Namur), passionnée par la création d'interfaces à la fois esthétiques, intuitives et accessibles.</p>
+                    <p>J'aime autant imaginer le visuel que de le traduire en code.</p>
+                </div>
+                <div class="skills__texte2">
+                    <p>Solaire et curieuse, je m'interresse à l'éco-conception, aux projets porteurs de sens et à tout ce qui permet de créer un web plus</p>
+                    <p>Chaque projet est pour moi une occasion d'apprendre, d'explorer et de proposer des solutions qui me ressemblent : simples, sensibles et empathiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3"  id="section3">
+        <div class="contact">
+            <div class="contact__contenu">
+                <div class="contact__contenu--header">
+                    <img src="assets/images/portfolio/email.png">
+                    <h3>On reste en contact !</h3>
+                    <p>Je serais ravie de vous répondre</p>
+                    <p>Je suis disponible pour un stage en Web</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <span class="big__line"></span>
+</body>
+<footer>
+    <p>© 2024 Léa Perraux</p>
+    <a class="footer__link" href="credits.html">Crédits</a>
+</footer>
+</html>
