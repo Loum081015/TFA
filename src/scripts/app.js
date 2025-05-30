@@ -1,10 +1,16 @@
 'use strict';
 const images = document.querySelectorAll(".section2__img");
 const cartes = document.querySelectorAll('.carte');
+const cartesFrontfaces = document.querySelectorAll('.front-face');
+const cartesBackfaces = document.querySelectorAll('.back-face');
+let lastCarteIndex = -1;
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerMenu = document.getElementById('burgerMenu');
 let currentIndex = 0;
+let currentImageIndex = 0;
 let isAnimating = false;
+let popupImage = document.querySelector('.popup__img');
+let popupImgElement = popupImage?.querySelector('img');
 
 /*Cartes (codé inspiré d'un code pen) */
 function animateCartes(newIndex) {
@@ -23,8 +29,7 @@ function animateCartes(newIndex) {
             "left-1",
             "left-2",
             "right-1",
-            "right-2",
-            "hidden"
+            "right-2"
         );
         if (offset === 0) {
             carte.classList.add("center");
@@ -46,44 +51,66 @@ function animateCartes(newIndex) {
     }, 800);
 }
 
+function TurnCard(index) {
+    cartesFrontfaces[index].classList.toggle('hidden');
+    cartesBackfaces[index].classList.toggle('hidden');
+    if(lastCarteIndex === index)
+        lastCarteIndex = -1;
+    else
+        lastCarteIndex = index;
+}
+
 cartes.forEach((carte, i) => {
     carte.addEventListener("click", () => {
-        animateCartes(i);
+        if(cartes[i].classList.contains('center'))
+            TurnCard(i);
+        else {
+            animateCartes(i);
+            if(lastCarteIndex !== -1)
+                TurnCard(lastCarteIndex);
+        }
     });
 });
 
-animateCartes(0);
+animateCartes(2);
 
 /*Menu*/
-if (burgerBtn) {
-    burgerBtn.addEventListener('click', () => {
-        burgerBtn.classList.toggle('active');
-        burgerMenu.classList.toggle('open');
-        document.body.classList.toggle('no-scroll');
-    });
-}
+burgerBtn?.addEventListener('click', () => {
+    burgerBtn.classList.toggle('active');
+    burgerMenu.classList.toggle('open');
+    document.body.classList.toggle('no-scroll');
+});
 
-
-console.log(window.scrollY);
-
-var oldScroll = 1;
-var nav = document.querySelector('.nav');
-window. addEventListener('scroll', scrollListener);
+let oldScroll = 0;
+let nav = document.querySelector('.nav');
+window.addEventListener('scroll', scrollListener);
 function scrollListener() {
     if (oldScroll > window.scrollY){
         nav.classList.remove('nav--close');
     }else {
         nav.classList.add('nav--close');
     }
-
     oldScroll = window.scrollY;
 }
 
 /*Design fiction*/
-if (images){
-images.forEach((image) => {
-  image.addEventListener("click", () => {
-    image.classList.toggle("expanded");
-  });
-})
+images?.forEach((image, index) => {
+    image.addEventListener("click", () => {
+        popupImage.classList.add("open");
+        document.body.classList.add('no-scroll');
+        showImage(index);
+    });
+});
+popupImage?.addEventListener("click", () => {
+    popupImgElement.classList.remove('open');
+    popupImgElement.addEventListener('transitionend', () => {
+        if(popupImgElement.classList.contains('open')) return;
+        popupImage.classList.remove("open");
+        document.body.classList.remove('no-scroll');
+    });
+});
+function showImage(index) {
+    popupImgElement.src = images[index].getAttribute('src');
+    popupImgElement.classList.add('open');
+    currentImageIndex = index;
 }

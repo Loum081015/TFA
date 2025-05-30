@@ -175,6 +175,7 @@ img{
 }
 .section2__img{
     display: grid;
+    cursor: pointer;
 }
 /*Button*/
 .header__btn--accueil{
@@ -528,8 +529,8 @@ a.nav__link:active{
 }
 /*Cartes*/
 .carte{
-    width: 164px;
-    height: 250px;
+    width: 30%;
+    aspect-ratio: 0.66;
     border-radius: 20px;
     font-size:14px;
     position: absolute;
@@ -538,58 +539,62 @@ a.nav__link:active{
 	cursor: pointer;
 }
 .carte.center{
+    width: 35%;
     z-index: 10;
-    transform: scale(1.1) translateZ(0);
     filter: none;
     filter: drop-shadow(0, 5px, 9px rgb(255, 255,255,));
     
 }
 .carte.left-1{
-    z-index:5;
-    transform: translateX(-200px) scale(0.9) translateZ(-100px);
+    z-index: 5;
+    transform: translateX(-90%);
     filter: grayscale(100%);
+
 }
 .carte.left-2{
     z-index: 1;
-    transform: translateX(-400px) scale(0.8) translateZ(-300px);
+    transform: translateX(-180%);
     filter: grayscale(100%);
     display: none;
 }
 .carte.right-1{
     z-index:5;
-    transform: translateX(200px) scale(0.9) translateZ(-100px);
+    transform: translateX(90%);
     filter: grayscale(100%);  
 }
 .carte.right-2{
     z-index: 1;
-    transform: translateX(400px) scale(0.8) translateZ(-300px);
+    transform: translateX(180%);
     filter: grayscale(100%);
     display: none;
 }
-.carte.hidden{
+.hidden{
     display: none;
 }
-
 .front-face{
-    margin: 30px 0;
-    width: fit-content;
+    width: 100%;
+    height: 100%;
+}
+.dataplay__carte, .gastrozen__carte, .janus__carte, .phrases__carte, .designfiction__carte{
+    width: 100%;
+    height: 100%;
 }
 .janus__carte{
-    background-image: url('assets/portfolio/janus.png');
+    background-image: url('../assets/images/portfolio/janus.png');
     background-size: cover;
 }
 .janus .back-face{
     background-color:#08071C;
 }
 .dataplay__carte{
-    background-image: url('assets/portfolio/dataplay.png');
+    background-image: url('../assets/images/portfolio/dataplay.png');
     background-size: cover;
 }
 .dataplay .back-face{
     background-color:#131311;
 }
 .gastrozen__carte{
-    background-image: url('assets/portfolio/perso.png');
+    background-image: url('../assets/images/portfolio/perso.png');
     background-size: cover;
 }
 .gastrozen .back-face{
@@ -597,14 +602,14 @@ a.nav__link:active{
     color: var(--color-text-header-portfolio);
 }
 .designfiction__carte{
-    background-image: url('assets/portfolio/design_fiction.png');
+    background-image: url('../assets/images/portfolio/design_fiction.png');
     background-size: cover;
 }
 .designfiction .back-face{
     background-color:#0F023D;
 }
 .phrases__carte{
-    background-image: url('assets/portfolio/phrases.png');
+    background-image: url('../assets/images/portfolio/phrases.png');
     background-size: cover;
 }
 .phrases .back-face{
@@ -612,13 +617,10 @@ a.nav__link:active{
     color: var(--color-text-header-portfolio);
 }
 .back-face{
-    /* display: none; */
-    width: 144px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
-    margin: 30px 0;
     padding: 10px 10px 20px;
-    display: none;
 }
 .back-face p{
     font-size: 14px;
@@ -721,6 +723,39 @@ a.nav__link:active{
     margin-top: 0;
     margin-left: 8px;
 }
+.popup__img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    background-color: #000000e0;
+}
+.popup__img.open {
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    opacity: 1;
+}
+.popup__image {
+    position: fixed;
+    width: 70vw;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.popup__image.open {
+    opacity: 1;
+    transform: scale(1);
+}
+.no-scroll {
+    overflow: hidden;
+}
 /*Cartes*/
 .contenu{
     background-color: var(--color-cartes-designfiction);
@@ -741,17 +776,22 @@ a.nav__link:active{
     transition: width 0.5s ease;
 }
 .section2__img.expanded {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70vw;
-  z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow-y: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow-y: hidden;
+}
+.section2__img.fixed{
+    position: fixed;
 }
 .section2__img:hover:not(.expanded){
     transform: scale(1.05);
+}
+.footer__link{
+    text-decoration: none;
 }
 @media (min-width:500px) and (max-width: 780px){
     .section2__img{
@@ -936,6 +976,16 @@ a.nav__link:active{
         height: auto;
         margin-top: 16px;
     }
+    .carte{
+        width: 20%;
+    }
+    .carte.center{
+        width: 25%;
+    }
+    .carte.left-2, .carte.right-2 {
+        display: block;
+        width: 15%;
+    }
 }
 @media (min-width:1250px){
     /*Grille*/
@@ -1085,6 +1135,15 @@ a.nav__link:active{
     .nav__menu{
         padding: 0 8px;
     }
+    .carte{
+        width: 15%;
+    }
+    .carte.center{
+        width: 20%;
+    }
+    .carte.left-2, .carte.right-2 {
+        width: 11%;
+    }
     /*Design fiction*/
     .picto{
         width: 102px;
@@ -1093,7 +1152,7 @@ a.nav__link:active{
     .design_fiction h2{
         margin-bottom: 64px;
     }
-    .section2__img{
+    .design_fiction .contenu img{
         width:315px;
         height: auto;
     } 
