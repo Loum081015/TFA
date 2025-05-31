@@ -37,6 +37,7 @@
     --color-text-designfiction: #FFFFFF;
     --color-cartes-designfiction: #656DC3;
     --color-texte-cartes-designfiction: #FBFCFF;
+    --color-background-skills: #222222;
 }
 
 *{
@@ -513,7 +514,9 @@ a.nav__link:active{
     text-align: center;
     z-index: 2;
     font-family: 'syne', sans-serif;
-    margin-top: 8px;
+    margin: 8px auto;
+    max-width:210px;
+    justify-content: center;
 }
 .portfolio h3{
     font-size: 20px;
@@ -623,7 +626,8 @@ a.nav__link:active{
     padding: 10px 10px 20px;
 }
 .back-face p{
-    font-size: 14px;
+    font-size: 16px;
+    margin: 10% 10%;
 }
 .carte__btn{
     display: block;
@@ -651,7 +655,7 @@ a.nav__link:active{
 }
 .cartes {
     width: 100%;
-    height: 450px;
+    height: 300px;
     position: relative;
     perspective: 1000px;
     display: flex;
@@ -659,7 +663,7 @@ a.nav__link:active{
     align-items: center;
     position: relative;
     transform-style: preserve-3d;
-    transition:transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition:transform 0.8s ease;
 }
 .dataplay{
     width: fit-content;
@@ -669,18 +673,94 @@ a.nav__link:active{
     margin-top: 80px
 }
 .portfolio .section1{
-    margin:0 20px;
+    margin:80px 20px 0 20px;
 }
 
 /*skills*/
-.skills__img{
+.skills_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.skill__ligne1{
+    margin-top: 32px;
+}
+.skills{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.skill{
+    background-color: var(--color-background-skills);
+    width: 100%;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 4px 0;
+}
+.skill p{
+    margin:8px;
+    text-align: center;
+}
+.skills__texte{
+    margin-bottom: 40px;
+}
+.skills__texte1 p, .skills__texte2 p{
+    margin:0 ;
+}
+.skills__texte2{
+    margin-top: 16px;
+}
+.skill img{
+    display: block;
     width: 20%;
+    margin: 8px auto;
+    
+}
+/*Contact*/
+.contact{
+    background-color: var(--color-background-skills);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 24px 40px;
+    margin: 0 auto;
+}
+.contact__contenu--header{
+    margin: 0 auto;
+    text-align: center;
+}
+.contact h3{
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.contact p{
+    margin: 0;
+}
+.contact img{
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact a{
+    text-decoration: none;
+    color: var(--color-text-portfolio);
+    text-align: center;
+}
+.contact__reseaux{
+    margin-top: 16px;
+    text-align: center;
+}
+.contact__reseaux--logo{
+    margin-top: 16px ;
+    display: flex;
+    justify-content: space-around;
+}
+.contact__reseaux img{
+    width: 100%;
 }
 /*Design fiction*/
 .design_fiction .nav{
     background-color:#07011D; 
-    
-
 }
 .section1{
     margin: 0 20px;
@@ -719,7 +799,7 @@ a.nav__link:active{
 .section1__detection, .section1__personnalisation,.section1__historique{
     margin-bottom: 40px;
 }
-.section1 p{
+.design_fiction .section1 p{
     margin-top: 0;
     margin-left: 8px;
 }
@@ -741,6 +821,7 @@ a.nav__link:active{
     height: 100vh;
     z-index: 999999;
     opacity: 1;
+    cursor: zoom-out;
 }
 .popup__image {
     position: fixed;
@@ -970,6 +1051,7 @@ a.nav__link:active{
         width: 195px;
         height: auto;
         margin: 0 auto 32px auto;
+        cursor: zoom-in;
     }
     .logo{
         width: 90px;
