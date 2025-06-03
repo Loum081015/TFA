@@ -132,7 +132,7 @@ ol{
 .nav__menu{
     position: absolute;
     top: calc(100% - 57px);
-    right:0;
+    right:40px;
     background-color: var(--color-background--menu); 
     list-style: none;
     padding-top: 64px;
@@ -140,7 +140,7 @@ ol{
     display: none;
     flex-direction: column;
     gap: 16px; 
-    width: 50%; 
+    width: fit-content; 
     height: 100vh;
     border-radius: 20px 0 0 20px;
     transform: translateY(0);
@@ -153,6 +153,7 @@ ol{
     font-family: 'syne';
     cursor: pointer;
     font-weight: 700;
+    margin: 0 16px;
 }
 a.nav__link:active{
     text-decoration: 1px underline var(--color-text--menu);
@@ -328,7 +329,7 @@ footer a{
 
 }
 /*Sections*/
-.section1, .section2, .section3{
+.janus .section1,.janus .section2,.janus .section3, .dataplay .section1, .dataplay .section2, .dataplay .section3{
     margin: 0 40px;
 }
 .section2__typographie1, .section2__typographie2, .section2__typographie3{
@@ -369,9 +370,6 @@ footer a{
     text-align: center;
 }
 /*Section3*/
-.section3{
-    margin: 0 20px;
-}
 .section3__btn{
     justify-content: space-evenly;
 }
@@ -715,6 +713,9 @@ footer a{
 .portfolio .section1{
     margin:80px 20px 0 20px;
 }
+.portfolio .section2{
+    margin:80px 20px;
+}
 /*Skills*/
 .skills_grid{
     display: grid;
@@ -886,7 +887,7 @@ footer a{
 }
 /*Cartes design fiction*/
 /*Cartes*/
-.contenu{
+.design_fiction .contenu{
     background-color: var(--color-cartes-designfiction);
     color: var(--color-texte-cartes-designfiction);
     border-radius: 10px;
@@ -905,6 +906,47 @@ footer a{
 /*Footer*/
 .footer__link{
     text-decoration: none;
+}
+/*Crédtis*/
+/*Logo*/
+.credits .logo{
+    width: 20px;
+}
+/*Titres et textes*/
+.credits {
+    font-family: 'syne';
+    color: var(--color-text-casestudy1);
+    background-color: var(--color-background-casestudy1);   
+}
+.credits h1, .credits h2{
+    color: var(--color-text--menu);
+}
+.credits h2{
+    margin: 0 0 0 40px;
+}
+.credits .header__contenu{
+    margin:90px 40px 0; 
+}
+.credits li{
+    margin:16px 0;
+}
+/*Section*/
+.credits .section1, .credits .section2, .credits .section3, .credits .section4{
+    border: 1px solid var(--color-btn--casestudy);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 40px 0 40px;
+}
+.credits .section4__texte{
+    margin: 40px 40px 40px 40px;
+}
+/*Nav*/
+.credits .nav__link{
+    text-wrap: nowrap;
+    margin: 0 16px;
+}
+.credits .nav__menu{
+    top: 0;
 }
 
 @media (min-width:500px) and (max-width: 780px){
@@ -1172,6 +1214,10 @@ footer a{
     .portfolio .insta__btn{
             height: fit-content;
     }
+    /*Section*/
+    .portfolio .section2{
+    margin:80px 50px;
+    }
 }
 @media (min-width:1250px){
     /*Grille*/
@@ -1381,6 +1427,10 @@ footer a{
     .portfolio p{
         font-size: 20px;
     }
+    .portfolio .section1 h3{
+        margin-bottom: 128px;
+        margin-left: 80px;
+    }
     /*Cartes*/
     .portfolio .carte{
         width: 15%;
@@ -1415,6 +1465,9 @@ footer a{
     }
     .portfolio .skills__texte2{
         margin-top: 0;
+    }
+    .portfolio .section2{
+        margin-top: 200px;
     }
     /*Section*/
     .portfolio .section3{
