@@ -114,6 +114,7 @@ ol{
 }
 .legende{
     font-size: 12px;
+    text-align: center;
 }
 /*Navigation*/
 .nav{
@@ -132,7 +133,7 @@ ol{
 .nav__menu{
     position: absolute;
     top: calc(100% - 57px);
-    right:40px;
+    right: 0;
     background-color: var(--color-background--menu); 
     list-style: none;
     padding-top: 64px;
@@ -236,7 +237,8 @@ a.nav__link:active{
     color: var(--color-chiffres-casestudy1);
     margin: 0;
     height: fit-content;
-    line-height: 24px;
+    // line-height: 24px;
+    transform: translate(-24px, 100%);
 }
 .section2__typo1{
     font-family: 'Inconsolata';
@@ -286,8 +288,6 @@ img{
     text-decoration: none;
     cursor: pointer;
     margin: 8px 16px 8px 0;
-}
-.section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
     color: var(--color-texte-casestudy1);
     text-decoration: none;
     font-family: 'syne';
@@ -383,8 +383,13 @@ footer a{
     margin: 16px 4px 0 4px;
     width: 40px;
     height: 40px;
-
     border: 1px solid #ffffff;
+}
+.empty__square{
+    display: block;
+    margin: 16px 4px 0 4px;
+    width: 40px;
+    height: 40px;
 }
 .darkblue__square{
     background-color: var(--color-darkblue__square);
@@ -437,6 +442,11 @@ footer a{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*Icones*/
 .icones{
@@ -829,8 +839,8 @@ footer a{
     background-color:#07011D; 
 }
 /*Section*/
-.design_fiction .section1{
-    margin: 0 20px;
+.design_fiction .section1, .design_fiction .section2{
+    margin: 0 40px;
 }
 .section1__detection, .section1__personnalisation,.section1__historique{
     margin-bottom: 40px;
@@ -894,6 +904,8 @@ footer a{
     padding: 16px;
     margin-bottom:48px ;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 .contenu h4{
     margin: 16px auto;
@@ -1056,15 +1068,22 @@ footer a{
         position: sticky;
         top: 100px;
         font-size:64px;
+        transform: translate(-8px, 100%);
     }
     .legende{
         font-size:14px;
+        text-align: center;
     }
     .phrases{
         padding: 0;
     }
     /*Carrés*/
     .square{
+        width: 82px;
+        height: 82px;
+        margin-top: 16px;
+    }
+    .empty__square{
         width: 82px;
         height: 82px;
         margin-top: 16px;
@@ -1128,9 +1147,12 @@ footer a{
     }
     /*Design fiction*/
     /*Section*/
-    .section1{
+    .design_fiction .section1{
         margin: 0  50px 104px 50px;
     } 
+    .design_fiction .section2{
+        margin: 0 50px;
+    }
     .section1 p{
         margin: 0;
     }
@@ -1144,7 +1166,7 @@ footer a{
         margin-right: 30px;
     }
     .contenu img{
-        width: 195px;
+        width: 80%;
         height: auto;
         margin: 0 auto 32px auto;
         cursor: zoom-in;
@@ -1168,6 +1190,18 @@ footer a{
     .carte.left-2, .carte.right-2 {
         display: block;
         width: 15%;
+    }
+    .back-face{
+        padding: 10px 20px;
+    }
+    .back-face p{
+        font-size: 18px;
+        margin-top: 32px;
+    }
+    .carte__btn, .gastrozen__btn{
+        margin-top: 16px;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
     /*Nav*/
     .portfolio .nav__link{
@@ -1282,12 +1316,17 @@ footer a{
     .janus .section1, .janus .section2, .janus .section3, .dataplay .section1, .dataplay .section2, .dataplay .section3{
     margin: 0 100px;
     }
-    .section2__couleurs__principales, .section2__couleurs--secondaires{
+    .section2__couleurs__principales{
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: fit-content;
         margin-bottom: 24px;;
+    }
+    .section2__couleurs--secondaires{
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
     }
     .section2__couleurs{
         height: fit-content;
@@ -1325,6 +1364,7 @@ footer a{
     }
     .legende{
         font-size:16px;
+        text-align: center;
     }
     /*Images*/
     .logo{
@@ -1353,7 +1393,10 @@ footer a{
     }
     /*Carrés*/
     .square{
-        margin-right: 110px;
+        width: 120px;
+        height: 120px;
+    }
+    .empty__square{
         width: 120px;
         height: 120px;
     }
@@ -1381,15 +1424,12 @@ footer a{
         height: 102px;
     }
     .design_fiction .contenu img{
-        width:315px;
+        width: 90%;
         height: auto;
+        cursor: zoom-in;
     } 
-    .design_fiction.section2__img{
-    display: grid;
-    cursor: pointer;
-    }
     .design_fiction .section2__img{
-    transition: width 0.5s ease;
+        transition: width 0.5s ease;
     }
     .design_fiction .section2__img.expanded {
         top: 50%;
@@ -1437,6 +1477,9 @@ footer a{
     }
     .portfolio .carte.center{
         width: 20%;
+        &:hover{
+            box-shadow: 0 5px 9px #FFFFFF;
+        }
     }
     .portfolio .carte.left-2, .portfolio .carte.right-2 {
         display: block;
@@ -1444,7 +1487,7 @@ footer a{
     }
     .portfolio .back-face p{
         font-size: 18px;
-        padding: 60px 40px;
+        padding: 40px 20px ;
         margin-bottom: 24px;
         text-align: center;
     }
