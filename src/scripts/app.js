@@ -12,7 +12,7 @@ let isAnimating = false;
 let popupImage = document.querySelector('.popup__img');
 let popupImgElement = popupImage?.querySelector('img');
 
-/*Cartes (codé inspiré d'un code pen) */
+/*Cartes (code inspiré d'un code pen) */
 function animateCartes(newIndex) {
     if (isAnimating) return;
     isAnimating = true;
@@ -22,8 +22,6 @@ function animateCartes(newIndex) {
     cartes.forEach((carte, i) => {
         const offset = (i - currentIndex + cartes.length) % cartes.length;
 
-        console.log(offset);
-
         carte.classList.remove(
             "center",
             "left-1",
@@ -31,18 +29,26 @@ function animateCartes(newIndex) {
             "right-1",
             "right-2"
         );
-        if (offset === 0) {
-            carte.classList.add("center");
-        }else if (offset === 1){
-            carte.classList.add("right-1");
-        }else if (offset === 2){
-            carte.classList.add("right-2");
-        }else if (offset === cartes.length -1){
-            carte.classList.add("left-1");
-        }else if (offset === cartes.length -2){
-            carte.classList.add("left-2");
-        }else{
-            carte.classList.add("hidden");
+
+        switch(offset) {
+            case 0:
+                carte.classList.add("center");
+                break;
+            case 1:
+                carte.classList.add("right-1");
+                break;
+            case 2:
+                carte.classList.add("right-2");
+                break;
+            case cartes.length -1:
+                carte.classList.add("left-1");
+                break;
+            case cartes.length -2:
+                carte.classList.add("left-2");
+                break;
+            default:
+                carte.classList.add("hidden");
+                break;
         }
     });
 
@@ -74,7 +80,7 @@ cartes.forEach((carte, i) => {
 
 animateCartes(2);
 
-/*Menu*/
+/*Menu*/  
 burgerBtn?.addEventListener('click', () => {
     burgerBtn.classList.toggle('active');
     burgerMenu.classList.toggle('open');
@@ -83,29 +89,31 @@ burgerBtn?.addEventListener('click', () => {
 
 let oldScroll = 0;
 let nav = document.querySelector('.nav');
+
+
 window.addEventListener('scroll', scrollListener);
 function scrollListener() {
-    if (oldScroll > window.scrollY){
-        nav.classList.remove('nav--close');
-    }else {
-        nav.classList.add('nav--close');
-    }
+    if(oldScroll < window.scrollY && !burgerMenu?.classList.contains('open'))
+        nav?.classList.add('nav--close');
+    else
+        nav?.classList.remove('nav--close');
+
     oldScroll = window.scrollY;
 }
 
 /*Design fiction*/
 images?.forEach((image, index) => {
     image.addEventListener("click", () => {
-        popupImage.classList.add("open");
+        popupImage?.classList.add("open");
         document.body.classList.add('no-scroll');
         showImage(index);
     });
 });
 popupImage?.addEventListener("click", () => {
-    popupImgElement.classList.remove('open');
-    popupImgElement.addEventListener('transitionend', () => {
-        if(popupImgElement.classList.contains('open')) return;
-        popupImage.classList.remove("open");
+    popupImgElement?.classList.remove('open');
+    popupImgElement?.addEventListener('transitionend', () => {
+        if(popupImgElement?.classList.contains('open')) return;
+        popupImage?.classList.remove("open");
         document.body.classList.remove('no-scroll');
     });
 });

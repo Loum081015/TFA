@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap');
 :root{
     --color-texte-casestudy1:#FFFFFF;
-    --color-menu-casestudy1: #FFFFFF;
+    --color-menu-casestudy1: #FFFFFF; 
+    --color-text-casestudy1:#FFFFFF;
     --color-background-casestudy1: #111111;
     --color-header-casestudy1: #417282;
-    --color-chiffres-casestudy1:#3F6D7C;
-    --color-ombre-casestudy1:#3F6D7C;
+    --color-chiffres-casestudy1:#417282;
     --color-darkblue__square:#08071C;
     --color-white__square:#FFFFFF;
     --color-grey__square:#D9D9D9;
@@ -31,7 +32,6 @@
     --color-h1-portfolio: #4B8497;
     --color-btn-portfolio: #4B8497;
     --color-nav-portfolio: #4B8497;
-    --color-nav-tel-portfolio: #F1F1F1;
     --color-background-portfolio: #111111;
     --color-designfiction-background: #0A0127;
     --color-text-designfiction: #FFFFFF;
@@ -39,11 +39,11 @@
     --color-texte-cartes-designfiction: #FBFCFF;
     --color-background-skills: #222222;
 }
-
+/*Code commun*/
 *{
     box-sizing: border-box;;
 }
-/*Telephone*/
+/*Téléphone*/
 /*Grid*/
 .grid{
     display: grid;
@@ -80,22 +80,9 @@
 .mgrid-end6{
     grid-column-end: 6;
 }
-/*Commun*/
 body{
     margin: 0;
 }
-.janus, .dataplay{
-    background-color: var(--color-background-casestudy1);
-    color: var(--color-texte-casestudy1);
-    font-family: 'Syne', sans-serif;
-}
-.janus .header, .dataplay .header{
-    background-color: var(--color-header-casestudy1);
-    padding-bottom: 56px;
-    margin-top: 57px;
-    padding-top: 16px;
-}
-/*Titres*/
 h1{
     font-size: 33px;
     margin: 0 20px;
@@ -105,10 +92,6 @@ h2{
     font-size: 26px;
     margin-top: 40px;
     margin-bottom: 8px;
-}
-.h2__header{
-    margin: 16px 20px;
-    text-align: center;
 }
 h3{
     font-size: 20px;
@@ -123,18 +106,6 @@ p{
     margin: 16px 0;
     line-height: 140%;
 }
-.text__header{
-    margin: 0 20px;
-    text-align: center;
-}
-.number{
-    font-size: 48px;
-    font-weight: bold;
-    color: var(--color-chiffres-casestudy1);
-    margin: 0;
-    height: fit-content;
-    line-height: 24px;
-}
 li{
   list-style:disc;  
 }
@@ -143,86 +114,6 @@ ol{
 }
 .legende{
     font-size: 12px;
-}
-.section2__typo1{
-    font-family: 'Inconsolata';
-}
-.section2__typo2{
-    font-family: 'Hind Siliguri';
-}
-.section2__typo3{
-    font-family: 'merriweather sans';
-}
-.section2__grille--colonnes--titre{
-    font-weight: 700;
-}
-.pages{
-    margin-bottom: 16px;
-}
-.taille_23{
-    font-size: 23px;
-}
-/*Images*/
-.logo{
-    width: 40px;
-    margin: 8px;
-}
-.dataplay .logo{
-    height: 40px;
-    width: auto;
-}
-img{
-    width: 100%;
-}
-.section2__img{
-    display: grid;
-    cursor: pointer;
-}
-/*Button*/
-.header__btn--accueil{
-    background-color: transparent;
-    border: none;
-    margin-top: 16px;
-}
-.section3__btn{
-    display: flex;
-    flex-wrap: wrap;
-}
-.section3__btn--site, .section3__btn--projets, .section3__btn--contact{
-    background-color: var(--color-btn--casestudy);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 8px 16px 8px 0;
-}
-.section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
-    color: var(--color-texte-casestudy1);
-    text-decoration: none;
-    font-family: 'syne';
-}
-footer{
-    display:flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 40px;
-}
-footer a{
-    color: var(--color-texte-casestudy1);
-    font-family: 'syne';
-    cursor: pointer;
-}
-.insta__btn{
-    border-radius: 10px;
-    background-color: var(--color-btn--casestudy);
-    margin: 10px 0;
-    color: var(--color-texte-casestudy1);
-    text-decoration: none;
-    padding: 8px 16px;
-    text-align: center;
-    text-wrap: wrap;
 }
 /*Navigation*/
 .nav{
@@ -310,6 +201,119 @@ a.nav__link:active{
     transform: rotate(-45deg) translate(0px, -17px);
     background-color: var(--color-text--menu);
 }
+.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+}
+.nav--close .nav{
+    transform: translateX(-100%);
+}
+/*Case study*/
+.janus, .dataplay{
+    background-color: var(--color-background-casestudy1);
+    color: var(--color-texte-casestudy1);
+    font-family: 'Syne', sans-serif;
+}
+.janus .header, .dataplay .header{
+    background-color: var(--color-header-casestudy1);
+    padding-bottom: 56px;
+    margin-top: 57px;
+    padding-top: 16px;
+}
+/*Titres et textes*/
+.h2__header{
+    margin: 16px 20px;
+    text-align: center;
+}
+.text__header{
+    margin: 0 20px;
+    text-align: center;
+}
+.number{
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-chiffres-casestudy1);
+    margin: 0;
+    height: fit-content;
+    line-height: 24px;
+}
+.section2__typo1{
+    font-family: 'Inconsolata';
+}
+.section2__typo2{
+    font-family: 'Hind Siliguri';
+}
+.section2__typo3{
+    font-family: 'merriweather sans';
+}
+.section2__grille--colonnes--titre{
+    font-weight: 700;
+}
+.pages{
+    margin-bottom: 16px;
+}
+.taille_23{
+    font-size: 23px;
+}
+/*Images*/
+.logo{
+    width: 40px;
+    margin: 8px;
+}
+.dataplay .logo{
+    height: 40px;
+    width: auto;
+}
+img{
+    width: 100%;
+}
+/*Button*/
+.header__btn--accueil{
+    background-color: transparent;
+    border: none;
+    margin-top: 16px;
+}
+.section3__btn{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section3__btn--site, .section3__btn--projets, .section3__btn--contact{
+    background-color: var(--color-btn--casestudy);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px 16px 8px 0;
+}
+.section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
+    color: var(--color-texte-casestudy1);
+    text-decoration: none;
+    font-family: 'syne';
+}
+.insta__btn{
+    border-radius: 10px;
+    background-color: var(--color-btn--casestudy);
+    margin: 10px 0;
+    color: var(--color-texte-casestudy1);
+    text-decoration: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-wrap: wrap;
+}
+/*Footer*/
+footer{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+footer a{
+    color: var(--color-texte-casestudy1);
+    font-family: 'syne';
+    cursor: pointer;
+}
 /*Lignes*/
 .section1__title--line{
     display: block;
@@ -327,6 +331,10 @@ a.nav__link:active{
 .section1, .section2, .section3{
     margin: 0 40px;
 }
+.section2__typographie1, .section2__typographie2, .section2__typographie3{
+    margin-top: 40px;
+}
+/*Section1 */
 .section1__numbers{
     margin-top: 120px;
 }
@@ -349,6 +357,7 @@ a.nav__link:active{
 .section1__typo--widht p{
     margin-right: 8px;
 }
+/*Section2*/
 .section2__grille--icones{
     display: flex;
     flex-wrap: wrap;
@@ -359,6 +368,7 @@ a.nav__link:active{
 .section2__grille--espacement{
     text-align: center;
 }
+/*Section3*/
 .section3{
     margin: 0 20px;
 }
@@ -368,16 +378,6 @@ a.nav__link:active{
 .section3 p{
     margin-top:40px;
     margin-bottom: 24px;
-}
-.no-scroll{
-    overflow: hidden;
-    height: 100vh;
-}
-.nav--close .nav{
-    transform: translateX(-100%);
-}
-.section2__typographie1, .section2__typographie2, .section2__typographie3{
-    margin-top: 40px;
 }
 /*Carrés*/
 .square{
@@ -493,16 +493,41 @@ a.nav__link:active{
     font-family: 'Syne', sans-serif;
     background-color: var(--color-background-portfolio);
 }
+/*Navigaion*/
+.portfolio .nav__top--img{
+    margin-left: 20px;
+}
+.portfolio .nav{
+    background-color: #f1f1f170;
+    backdrop-filter: blur(5px);
+}
+.portfolio .nav__line{
+    background-color: var(--color-text-header-portfolio);
+}
+.portfolio .nav__img{
+    margin-top: 20px;
+    width: 22px;
+    margin-bottom: 4px;
+}
+/*Header*/
 .portfolio .header{
     background-color: var(--color-header-portfolio);
     color: var(--color-text-header-portfolio);
 }
+.portfolio .header__img{
+    transform: translateY(-44px);
+}
+.portfolio .header__text{
+    margin: 0 20px;
+}
+/*Buttons*/
 .portfolio .insta__btn{
     margin: 24px auto ;
     width:fit-content;
     margin-top: 24px; 
     font-size: 16px;   
 }
+/*Titres et textes*/
 .portfolio h1{
     font-family: 'satisfy', cursive;
     color: var(--color-h1-portfolio);
@@ -521,18 +546,9 @@ a.nav__link:active{
 .portfolio h3{
     font-size: 20px;
 }
-.portfolio p{
-    font-size: 16px;
-}
-.portfolio .header__img{
-    transform: translateY(-44px);
-}
-.portfolio .header__text{
-    margin: 0 20px;
-}
-/*Cartes*/
+/*Cartes projets*/
 .carte{
-    width: 30%;
+    width: 35%;
     aspect-ratio: 0.66;
     border-radius: 20px;
     font-size:14px;
@@ -542,7 +558,7 @@ a.nav__link:active{
 	cursor: pointer;
 }
 .carte.center{
-    width: 35%;
+    width: 45%;
     z-index: 10;
     filter: none;
     filter: drop-shadow(0, 5px, 9px rgb(255, 255,255,));
@@ -552,24 +568,38 @@ a.nav__link:active{
     z-index: 5;
     transform: translateX(-90%);
     filter: grayscale(100%);
-
+ &:hover{
+    filter: none;
+ }
 }
 .carte.left-2{
     z-index: 1;
     transform: translateX(-180%);
     filter: grayscale(100%);
     display: none;
+    
+    &:hover{
+    filter: none;
+ }
 }
 .carte.right-1{
     z-index:5;
     transform: translateX(90%);
-    filter: grayscale(100%);  
+    filter: grayscale(100%); 
+    
+    &:hover{
+    filter: none;
+ }
 }
 .carte.right-2{
     z-index: 1;
     transform: translateX(180%);
     filter: grayscale(100%);
     display: none;
+
+    &:hover{
+    filter: none;
+ }
 }
 .hidden{
     display: none;
@@ -623,11 +653,11 @@ a.nav__link:active{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    padding: 10px 10px 20px;
+    padding-top: 10px;
 }
 .back-face p{
-    font-size: 16px;
-    margin: 10% 10%;
+    font-size: 14px;
+    margin: 5% 5%;
 }
 .carte__btn{
     display: block;
@@ -637,7 +667,20 @@ a.nav__link:active{
     padding: 5px 14px;
     color: var(--color-text-portfolio);
     text-decoration: none;
-    margin: 14px auto 5px auto;
+    margin: 8px auto 5px auto;
+    font-size: 12px;
+}
+.gastrozen__btn{
+    display: block;
+    width: fit-content;
+    border-radius: 20px;
+    background-color:grey;
+    padding: 5px 14px;
+    color: var(--color-text-portfolio);
+    text-decoration: none;
+    margin: 8px auto 5px auto;
+    font-size: 12px;
+    cursor: not-allowed;
 }
 .janus__casestudy{
     display: block;
@@ -672,8 +715,7 @@ a.nav__link:active{
 .portfolio .section1{
     margin:80px 20px 0 20px;
 }
-
-/*skills*/
+/*Skills*/
 .skills_grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -748,37 +790,51 @@ a.nav__link:active{
     text-align: center;
 }
 .contact__reseaux--logo{
-    margin-top: 16px ;
+    margin-top: 24px ;
     display: flex;
     justify-content: space-around;
 }
 .contact__reseaux img{
     width: 100%;
 }
+
 /*Design fiction*/
-.design_fiction .nav{
-    background-color:#07011D; 
-}
-.section1{
-    margin: 0 20px;
-}
 .design_fiction{
     background:linear-gradient(#07011C, #160457);
     color: var(--color-text-designfiction);
-    font-family: 'syne', sans-serif;
+    font-family: 'comfortaa';
 }
+/*TItres et textes*/
 .design_fiction h3{
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 0;
+    font-family: 'orbitron';
 }
 .design_fiction h2{
     margin-bottom: 40px;
+    font-family: 'orbitron';
 }
 .design_fiction h1{
     margin-top: 48px; 
+    font-family: 'orbitron';
 }
-/*Img*/
+.design_fiction .section1 p{
+    margin-top: 0;
+    margin-left: 8px;
+}
+/*Nav*/
+.design_fiction .nav{
+    background-color:#07011D; 
+}
+/*Section*/
+.design_fiction .section1{
+    margin: 0 20px;
+}
+.section1__detection, .section1__personnalisation,.section1__historique{
+    margin-bottom: 40px;
+}
+/*Images*/
 .picto{
     width: 60px;
     height: 60px;
@@ -786,19 +842,6 @@ a.nav__link:active{
 .design_fiction .logo{
     width: 58px;
     height: auto;
-}
-.design_fiction .header{
-    margin: 88px  40px 0 40px;
-    background-image: url('../assets/images/design_fiction/Background.png');
-    padding-bottom: 40px;
-    text-align: center;
-}
-.section1__detection, .section1__personnalisation,.section1__historique{
-    margin-bottom: 40px;
-}
-.design_fiction .section1 p{
-    margin-top: 0;
-    margin-left: 8px;
 }
 .popup__img {
     position: fixed;
@@ -834,6 +877,14 @@ a.nav__link:active{
 .no-scroll {
     overflow: hidden;
 }
+/*Header*/
+.design_fiction .header{
+    margin: 88px  40px 0 40px;
+    background-image: url('../assets/images/design_fiction/Background.png');
+    padding-bottom: 40px;
+    text-align: center;
+}
+/*Cartes design fiction*/
 /*Cartes*/
 .contenu{
     background-color: var(--color-cartes-designfiction);
@@ -846,42 +897,43 @@ a.nav__link:active{
 .contenu h4{
     margin: 16px auto;
     text-align: center;
+    font-family: 'orbitron';
 }
 .section1{
     margin-bottom: 40px;
 }
-.section2__img{
-    transition: width 0.5s ease;
-}
-.section2__img.expanded {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw;
-    z-index: 1000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    overflow-y: hidden;
-}
-.section2__img.fixed{
-    position: fixed;
-}
-.section2__img:hover:not(.expanded){
-    transform: scale(1.05);
-}
+/*Footer*/
 .footer__link{
     text-decoration: none;
 }
+
 @media (min-width:500px) and (max-width: 780px){
-    .section2__img{
+    /*Design fiction*/
+    .design_fiction .section2__img{
         width: 400px;
         height: auto;
         margin: 0 auto;
     }
-    
+    /*Portfolio*/
+    .back-face{
+        padding: 50px 20px;
+    }
+    .back-face p{
+        font-size: 16px;
+        margin-top: 32px;
+    }
+    .carte__btn, .gastrozen__btn{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+    .cartes{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
 }
 
-/*Responsive*/
-/*Janus et dataplay*/
+/*Responsive tablette*/
 @media (min-width:780px){
     /*Grille*/
     .grid{
@@ -931,16 +983,14 @@ a.nav__link:active{
     .tgrid-end8{
         grid-column-end: 8;
     }
-    /*Taille de texte*/
+    /*Commun*/
+    /*Titres et textes*/
     h1{
         font-size: 58px;
         margin-top: 64px;
     }
     h2{
         font-size: 36px;
-    }
-    .h2__header{
-        margin-top: 32px;
     }
     h3{
         font-size:25px
@@ -951,6 +1001,15 @@ a.nav__link:active{
     p{
         font-size: 18px;
     }
+    li{
+        font-size: 18px;
+        margin: 8px 0;
+    }
+    /*Case study*/
+    /*Titres et textes*/
+    .h2__header{
+        margin-top: 32px;
+    }
     .number{
         position: sticky;
         top: 100px;
@@ -959,15 +1018,10 @@ a.nav__link:active{
     .legende{
         font-size:14px;
     }
-    li{
-        font-size: 18px;
-        margin: 8px 0;
-    }
-
     .phrases{
         padding: 0;
     }
-    /*Square*/
+    /*Carrés*/
     .square{
         width: 82px;
         height: 82px;
@@ -984,7 +1038,7 @@ a.nav__link:active{
         justify-content: space-evenly;
     }
     /*Icones*/
-    .icones{
+   .icones{
         width: 33px;
         height: 32px;
     }
@@ -995,18 +1049,19 @@ a.nav__link:active{
     .section2__grille--icones{
         margin-top: 16px;
     }
-    /*Logo*/
-    .logo{
+    /*Images*/
+     .logo{
         height: 51px;
         width: auto;
     }
-    /*Btn*/
+    /*Buttons*/
     .section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
         font-size: 16px;
     }
     .section3__btn{
         justify-content: space-between;
     }
+    /*Navigation*/
     .nav__btn{
         display: none;
     }
@@ -1017,7 +1072,7 @@ a.nav__link:active{
         padding: 0 8px;
         height: fit-content;
         justify-content: space-evenly;
-        
+        top: 20px
     }
     .nav__link{
         color: var(--color-texte-casestudy1);
@@ -1026,23 +1081,25 @@ a.nav__link:active{
         text-decoration: underline;
     }
     /*Section*/
-    .section1, .section2, .section3{
+    .janus .section1, .janus .section2, .janus .section3, .dataplay .section1, .dataplay .section2, .dataplay .section3{
     margin: 0 80px;
     }
     /*Design fiction*/
+    /*Section*/
     .section1{
         margin: 0  50px 104px 50px;
-    }  
-    .picto{
-        width: 77px;
-        height: 77px;
-        margin-right: 30px;
-    }
+    } 
     .section1 p{
         margin: 0;
     }
     .contenu{
         padding: 32px;
+    }
+    /*Img*/
+    .picto{
+        width: 77px;
+        height: 77px;
+        margin-right: 30px;
     }
     .contenu img{
         width: 195px;
@@ -1055,7 +1112,12 @@ a.nav__link:active{
         height: auto;
         margin-top: 16px;
     }
-    .carte{
+    .janus .logo{
+        width: 50px;
+    }
+    /*Portfolio*/
+    /*Cartes*/
+    .portfolio .carte{
         width: 20%;
     }
     .carte.center{
@@ -1064,6 +1126,51 @@ a.nav__link:active{
     .carte.left-2, .carte.right-2 {
         display: block;
         width: 15%;
+    }
+    /*Nav*/
+    .portfolio .nav__link{
+        color: var(--color-text-header-portfolio);
+    }
+    .portfolio .nav__menu{
+        padding-right: 0;
+        transform: translateX(16px);
+    }
+    /*Titres et textes*/
+    .portfolio h1{
+        margin-top: 64px;
+    }
+    .portfolio .section1 h3{
+        margin-bottom: 104px;
+        margin-left: 80px;
+    }
+    .portfolio .section2 h3{
+        margin-top: 104px;
+    }
+    .portfolio .header__text p, .portfolio .insta__btn{
+        transform: translateY(-50px);
+    }
+    /*Skills*/
+    .portfolio .skill__ligne1, .portfolio .skill__ligne2{
+        display: flex;
+        justify-content: space-around;
+        width: calc(100% - 8.5%);
+    }
+    .portfolio .skill__ligne1{
+        transform: translateX(-8.5%);
+    }
+    .portfolio .skill__ligne2{
+        transform: translateX(8.5%);
+    }
+    .portfolio .skill{
+        width: 140px;
+    }
+    /*Img*/
+    .portfolio .header__img--paysage{
+        margin-top:64px
+    }
+    /*Button*/
+    .portfolio .insta__btn{
+            height: fit-content;
     }
 }
 @media (min-width:1250px){
@@ -1124,8 +1231,9 @@ a.nav__link:active{
     .pgrid-end10{
         grid-column-end:10;
     }
+    /*Case study*/
     /*Section*/
-    .section1, .section2, .section3{
+    .janus .section1, .janus .section2, .janus .section3, .dataplay .section1, .dataplay .section2, .dataplay .section3{
     margin: 0 100px;
     }
     .section2__couleurs__principales, .section2__couleurs--secondaires{
@@ -1166,15 +1274,17 @@ a.nav__link:active{
         font-size: 20px;
         margin: 8px 0;
     }
-    .logo{
-        margin-bottom: 16px;
-    }
     .phrases{
         padding: 0;
     }
     .legende{
         font-size:16px;
     }
+    /*Images*/
+    .logo{
+        margin-bottom: 16px;
+    }
+    /*Section*/
     .section2__typo1{
         margin-bottom: 56px;
     }
@@ -1192,7 +1302,10 @@ a.nav__link:active{
     .section2__grille--espacement{
         margin-top: 0;
     }
-    /*Square*/
+    .section2__typographie1, .section2__typographie2, .section2__typographie3{
+        margin-top: 64px;
+    }
+    /*Carrés*/
     .square{
         margin-right: 110px;
         width: 120px;
@@ -1202,37 +1315,119 @@ a.nav__link:active{
     align-items: normal;
     height: min-content;
     }
+    /*Lines*/
     .big__line{
         margin: 88px 0;
     }
+    /*Footer*/
     .footer__link{
         font-size: 20px;
     }
-    .section2__typographie1, .section2__typographie2, .section2__typographie3{
-        margin-top: 64px;
-    }
+    /*nav*/
     .nav__menu{
         padding: 0 8px;
     }
-    .carte{
-        width: 15%;
-    }
-    .carte.center{
-        width: 20%;
-    }
-    .carte.left-2, .carte.right-2 {
-        width: 11%;
-    }
+
     /*Design fiction*/
+    /*Images*/
     .picto{
         width: 102px;
         height: 102px;
-    }
-    .design_fiction h2{
-        margin-bottom: 64px;
     }
     .design_fiction .contenu img{
         width:315px;
         height: auto;
     } 
+    .design_fiction.section2__img{
+    display: grid;
+    cursor: pointer;
+    }
+    .design_fiction .section2__img{
+    transition: width 0.5s ease;
+    }
+    .design_fiction .section2__img.expanded {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        z-index: 1000;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        overflow-y: hidden;
+    }
+    .design_fiction .section2__img.fixed{
+        position: fixed;
+    }
+    .design_fiction .section2__img:hover:not(.expanded){
+        transform: scale(1.05);
+    }
+    /*Titres et textes*/
+    .design_fiction h2{
+        margin-bottom: 64px;
+    }
+    /*Portfolio*/
+    /*Icones*/
+    .portfolio .insta:hover, .portfolio .linkedin:hover, .portfolio .github:hover{
+    transition: 0.5s ease;
+    transform: scale(1.2);
+    }
+    .portfolio .contact__reseaux--mail:hover{
+        transition: 0.5s ease-in-out;
+        color: var(--color-btn-portfolio);
+    }
+    /*Texts*/
+    .portfolio .header__text{
+        margin-top: 40px;
+    }
+    .portfolio p{
+        font-size: 20px;
+    }
+    /*Cartes*/
+    .portfolio .carte{
+        width: 15%;
+    }
+    .portfolio .carte.center{
+        width: 20%;
+    }
+    .portfolio .carte.left-2, .portfolio .carte.right-2 {
+        display: block;
+        width: 10%;
+    }
+    .portfolio .back-face p{
+        font-size: 18px;
+        padding: 60px 40px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .portfolio .carte__btn, .portfolio .gastrozen__btn{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .dataplay__casestudy, .janus__casestudy{
+        font-size: 16px;
+    }
+    /*Skills*/
+    .portfolio .skill{
+        width: 150px;
+    }
+    .portfolio .skills__texte{
+        margin-top: 40px;
+        margin-bottom: 104px;
+    }
+    .portfolio .skills__texte2{
+        margin-top: 0;
+    }
+    /*Section*/
+    .portfolio .section3{
+        padding: 0 200px;
+    }
+    /*Contact*/
+    .portfolio .contact__reseaux{
+        margin-top: 61px;
+    }
+    .portfolio .contact__reseaux--mail{
+        font-size: 20px;
+    }
+    .contact__reseaux--logo{
+       margin-top: 32px;
+    }
 }
