@@ -17,7 +17,7 @@
     --color-black__square:#000000;
     --color-blue__square:#46A9EE;
     --color-lightblue-casestudy1:#8FC1E3;
-    --color-lightgrey-casestudy1:#F5F5F5;
+    --color-lightgrey__square:#F5F5F5;
     --color-darkgrey--casestudy1:#222222;
     --color-C8:#C8D9E6;
     --color-56:#567791;
@@ -554,7 +554,7 @@ footer a{
     font-family: 'satisfy', cursive;
     color: var(--color-h1-portfolio);
     font-size: 33px;
-    margin-top: 16px;
+    margin-top: 80px;
 }
 .portfolio h2{
     font-size: 20px;
@@ -831,7 +831,7 @@ footer a{
 }
 /*TItres et textes*/
 .design_fiction h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 0;
     font-family: 'orbitron';
@@ -846,7 +846,6 @@ footer a{
 }
 .design_fiction .section1 p{
     margin-top: 0;
-    margin-left: 8px;
 }
 /*Nav*/
 .design_fiction .nav{
