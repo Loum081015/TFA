@@ -220,7 +220,7 @@ a.nav__link:active{
 .janus .header, .dataplay .header{
     background-color: var(--color-header-casestudy1);
     padding-bottom: 56px;
-    margin-top: 57px;
+    margin-top: 50px;
     padding-top: 16px;
 }
 /*Titres et textes*/
@@ -261,12 +261,10 @@ a.nav__link:active{
 }
 /*Images*/
 .logo{
-    width: 40px;
-    margin: 8px;
-}
-.dataplay .logo{
-    height: 40px;
-    width: auto;
+    margin-top: 20px;
+    width: 22px;
+    margin-bottom: 4px;
+    margin-left: 20px;
 }
 img{
     width: 100%;
@@ -863,10 +861,6 @@ footer a{
     width: 60px;
     height: 60px;
 }
-.design_fiction .logo{
-    width: 58px;
-    height: auto;
-}
 .popup__img {
     position: fixed;
     top: 0;
@@ -933,10 +927,6 @@ footer a{
     text-decoration: none;
 }
 /*Crédtis*/
-/*Logo*/
-.credits .logo{
-    width: 20px;
-}
 /*Titres et textes*/
 .credits {
     font-family: 'syne';
