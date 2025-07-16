@@ -122,3 +122,21 @@ function showImage(index) {
     popupImgElement.classList.add('open');
     currentImageIndex = index;
 }
+
+const button = document.querySelector('.dropbtn');
+const dropdown = document.querySelector('.dropdown');
+let isOpen = false;
+
+button?.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen = !isOpen;
+
+    isOpen ? dropdown?.classList.add('isOpen') : dropdown.classList.remove('isOpen');
+});
+
+document.addEventListener('click', function (e) {
+    if (!button?.contains(e.target)) {
+        isOpen = false;
+        dropdown?.classList.remove('isOpen');
+    }
+});

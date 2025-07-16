@@ -149,6 +149,10 @@ ol{
     transition: transform 0.3s ease-in-out;
 }
 
+.nav__top--img{
+    margin-left: 20px;
+}
+
 .nav__link{
     text-decoration: none;
     color: var(--color-text--menu);
@@ -260,14 +264,27 @@ a.nav__link:active{
     font-size: 23px;
 }
 /*Images*/
-.logo{
+img{
+    width: 100%;
+}
+.arrow{
+    display: inline-block;
+    background-image: url(../assets/images/fleche_menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    filter: invert(51%) sepia(12%) saturate(504%) hue-rotate(148deg) brightness(90%) contrast(86%);
+    transform: rotate(180deg);
+    margin-left: 4px;
+} 
+.isOpen .arrow{
+    transform: rotate(0deg);
+}
+.nav__img{
     margin-top: 20px;
     width: 22px;
     margin-bottom: 4px;
-    margin-left: 20px;
-}
-img{
-    width: 100%;
 }
 /*Button*/
 .header__btn--accueil{
@@ -300,6 +317,46 @@ img{
     padding: 8px 16px;
     text-align: center;
     text-wrap: wrap;
+}
+.dropbtn{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color-text--menu);
+    font-family: 'syne';
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 16px;
+    border: none;
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: relative;
+    background-color: var(--color-background--menu);
+    z-index: 1;
+    top: 8px;
+}
+.dropdown-content a{
+    color: var(--color-text--menu);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-left: 8px;
+}
+.dropdown-content a:hover{
+    background-color: var(--color-btn--casestudy);
+    color: var(--color-background--menu);
+}
+.isOpen .dropdown-content{
+    display: block;
 }
 /*Footer*/
 footer{
@@ -514,21 +571,13 @@ footer a{
     background-color: var(--color-background-portfolio);
 }
 /*Navigaion*/
-.portfolio .nav__top--img{
-    margin-left: 20px;
-}
 .portfolio .nav{
     background-color: #f1f1f170;
     backdrop-filter: blur(5px);
 }
 .portfolio .nav__line{
     background-color: var(--color-text-header-portfolio);
-}
-.portfolio .nav__img{
-    margin-top: 20px;
-    width: 22px;
-    margin-bottom: 4px;
-}
+} 
 /*Header*/
 .portfolio .header{
     background-color: var(--color-header-portfolio);
@@ -1124,12 +1173,22 @@ footer a{
         height: 51px;
         width: auto;
     }
+    .arrow{
+        filter:invert(100%) ;
+    }
     /*Buttons*/
     .section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
         font-size: 16px;
     }
     .section3__btn{
         justify-content: space-between;
+    }
+    .dropbtn{
+    font-size: 20px;
+    color: var(--color-text-header-portfolio);
+    }
+    .dropdown-content a{
+    margin-left: 0px;
     }
     /*Navigation*/
     .nav__btn{

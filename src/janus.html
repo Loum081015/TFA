@@ -19,8 +19,8 @@
     <header id="header" class="header">
         <nav class="nav">
             <div class="nav__top">
-                <a href="index.html"  class="header__btn--accueil">
-                    <img class="logo" src="assets/images/logo_blanc.png" alt="logo projet janus">
+                <a href="index.html"  class="nav__top--img">
+                    <img class="nav__img" src="assets/images/logo_blanc.png" alt="logo projet janus">
                 </a>
                 <button id="burgerBtn" class="nav__btn">
                     <span class="nav__line"></span>
@@ -29,10 +29,20 @@
                 </button>
             </div>
             <ul class="nav__menu"  id="burgerMenu">
-                <li class="nav__item"><a class="nav__link" href="#header">Home</a></li>
-                <li class="nav__item"><a class="nav__link" href="#section1">Processus</a></li>
-                <li class="nav__item"><a class="nav__link" href="#section2">Design</a></li>
-                <li class="nav__item"><a class="nav__link" href="https://leaperraux.ovh/projets/janus/" target="_blank">Mon site</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#header">Portfolio</a></li> 
+                <li class="nav__item dropdown">
+                    <button class="dropbtn">Projets 
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="janus.html">Janus</a>
+                        <a href="dataplay.html">Dataplay</a>
+                        <a href="design_fiction.html">Design fiction</a>
+                        <a href="/projets/phrase1/">Les phrases</a>
+                    </div>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="index.html#section2">Skills</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#section3">Contact</a></li>
             </ul>
         </nav>
         <h1>Case study</h1>
