@@ -161,8 +161,10 @@ ol{
     font-weight: 700;
     margin: 0 16px;
 }
-a.nav__link:active{
-    text-decoration: 1px underline var(--color-text--menu);
+a.nav__link:hover, .dropbtn:hover{
+    text-decoration: 2px underline var(--color-text--menu);
+    color: var(--color-text--menu);
+    transition: all 0.3s ease;
 }
 .nav__menu li{
     list-style: none;
@@ -336,6 +338,7 @@ img{
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content{
     display: none;
     position: relative;
