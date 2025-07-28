@@ -26,6 +26,7 @@
     --color-espacement: #FFCDCD;
     --color-btn--casestudy:#3F6D7C;
     --color-text--menu: #417282;
+    --color-hover-btn:#2A4A54;
     --color-background--menu: #F3f3f3;
     --color-header-portfolio: #F1F1F1;
     --color-text-header-portfolio: #000000;
@@ -161,11 +162,7 @@ ol{
     font-weight: 700;
     margin: 0 16px;
 }
-a.nav__link:hover, .dropbtn:hover{
-    text-decoration: 2px underline var(--color-text--menu);
-    color: var(--color-text--menu);
-    transition: all 0.3s ease;
-}
+
 .nav__menu li{
     list-style: none;
 }
@@ -173,6 +170,7 @@ a.nav__link:hover, .dropbtn:hover{
 .nav__menu.open{
     display: flex;
     width: 50%;
+    align-items: flex-start;
 }
 
 .nav--close{
@@ -229,6 +227,22 @@ a.nav__link:hover, .dropbtn:hover{
     margin-top: 50px;
     padding-top: 16px;
 }
+/*Nav*/
+.janus .dropbtn, .dataplay .dropbtn, .design_fiction .dropbtn{
+    color: var(--color-text--menu);
+}
+
+.janus .arrow, .dataplay .arrow{
+    filter: brightness(0) saturate(100%) invert(40%) sepia(34%) saturate(548%) hue-rotate(148deg) brightness(92%) contrast(86%);
+}
+
+.janus .dropdown-content, .dataplay .dropdown-content, .design_fiction .dropdown-content{
+    background-color: var(--color-background--menu);
+}
+.janus .dropdown-content a, .dataplay .dropdown-content a{
+    color: var(--color-text--menu);
+}
+
 /*Titres et textes*/
 .h2__header{
     margin: 16px 20px;
@@ -279,7 +293,7 @@ img{
     filter: invert(51%) sepia(12%) saturate(504%) hue-rotate(148deg) brightness(90%) contrast(86%);
     transform: rotate(180deg);
     margin-left: 4px;
-} 
+}
 .isOpen .arrow{
     transform: rotate(0deg);
 }
@@ -311,6 +325,10 @@ img{
     font-family: 'syne';
 }
 .insta__btn{
+    margin: 24px auto ;
+    width:fit-content;
+    margin-top: 24px; 
+    font-size: 16px;
     border-radius: 10px;
     background-color: var(--color-btn--casestudy);
     margin: 10px 0;
@@ -319,6 +337,9 @@ img{
     padding: 8px 16px;
     text-align: center;
     text-wrap: wrap;
+}
+.insta__btn:hover{
+    background-color: var(--color-hover-btn);
 }
 
 .dropbtn{
@@ -600,6 +621,7 @@ footer a{
     margin-top: 24px; 
     font-size: 16px;   
 }
+
 /*Titres et textes*/
 .portfolio h1{
     font-family: 'satisfy', cursive;
@@ -953,7 +975,9 @@ footer a{
     margin: 88px  40px 0 40px;
     background-image: url('../assets/images/design_fiction/Background.png');
     padding-bottom: 40px;
-    text-align: center;
+}
+.design_fiction .dropdown-content a{
+    font-family: 'syne';
 }
 /*Cartes design fiction*/
 /*Cartes*/
@@ -1177,8 +1201,8 @@ footer a{
         height: 51px;
         width: auto;
     }
-    .arrow{
-        filter:invert(100%) ;
+    .janus .arrow, .dataplay .arrow{
+        filter: none;
     }
     /*Buttons*/
     .section3__btn--site a, .section3__btn--projets a, .section3__btn--contact a{
@@ -1194,6 +1218,10 @@ footer a{
     .dropdown-content a{
     margin-left: 0px;
     }
+    .janus .dropbtn, .dataplay .dropbtn{
+        color: var(--color-text-casestudy1);
+    }
+    
     /*Navigation*/
     .nav__btn{
         display: none;
@@ -1278,7 +1306,19 @@ footer a{
     /*Nav*/
     .portfolio .nav__link{
         color: var(--color-text-header-portfolio);
-    }²
+    }
+    .arrow{
+        filter:invert(100%) ;
+    }
+    .janus .dropdown-content, .dataplay .dropdown-content{
+        background-color: var(--color-header-casestudy1);
+    }
+    .janus .dropdown-content a, .dataplay .dropdown-content a{
+        color: var(--color-text-casestudy1);
+    }
+    .janus .dropbtn.isOpen, .dataplay .dropbtn.isOpen{
+        color: var(--color-texte-casestudy1);
+    }
     /*Titres et textes*/
     .portfolio h1{
         margin-top: 64px;
@@ -1293,6 +1333,7 @@ footer a{
     .portfolio .header__text p, .portfolio .insta__btn{
         transform: translateY(-50px);
     }
+    
     .portfolio .header__text {
         height: 100vh;
     }
@@ -1328,7 +1369,7 @@ footer a{
         height: 100vh;
     }
 }
-@media (min-width:1250px){
+@media (min-width:1250px ) and (max-width:1920px) {
     /*Grille*/
     .grid{
         display: grid;
@@ -1390,7 +1431,7 @@ footer a{
     .footer__link:hover{
         text-decoration: underline;
         color: var(--color-btn-portfolio);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
     /*Case study*/
     /*Section*/
@@ -1411,6 +1452,11 @@ footer a{
     }
     .section2__couleurs{
         height: fit-content;
+    }
+    .insta__btn:hover{
+        transform: rotate(5deg);
+        transition: transform 0.25s ease;
+        background-color: var(--color-hover-btn);
     }
     /*typo*/
     h1{
@@ -1447,12 +1493,37 @@ footer a{
         font-size:16px;
         text-align: center;
     }
+    /*dropdown*/
+    a.nav__link:hover, .dropbtn:hover{
+    text-decoration: 2px underline var(--color-text--menu);
+    color: var(--color-text--menu);
+    transition: all 0.1s ease;
+    }
+    .janus .dropbtn:hover, .dataplay .dropbtn:hover{
+    color: var(--color-background-casestudy1);
+    text-decoration: none;
+    }
+    .janus .dropbtn:hover .arrow, .dataplay .dropbtn:hover .arrow{
+    filter: invert(100%);
+    }
+
+    .janus .nav__link:hover, .dataplay .nav__link:hover{
+    color: var(--color-background-casestudy1);
+    text-decoration: none;
+    }
+    .janus .dropdown-content a:hover, .dataplay .dropdown-content a:hover{
+    color: var(--color-text-header-portfolio);
+    background-color: var(--color-menu-casestudy1);
+    }
+    .dropbtn:hover .arrow{
+    filter: brightness(0) saturate(100%) invert(39%) sepia(41%) saturate(401%) hue-rotate(148deg) brightness(97%) contrast(96%);
+}
     /*Images*/
     .logo{
         margin-bottom: 16px;
     }
     .portfolio .header__img{
-    transform: translateY(-50px);
+        transform: translateY(-50px);
     }
     /*Section*/
     .section2__typo1{
@@ -1554,6 +1625,12 @@ footer a{
         transition: 0.5s ease-in-out;
         color: var(--color-btn-portfolio);
     }
+    /*Btn*/
+    .portfolio .insta__btn:hover{
+        transform: translateY(-50px) rotate(5deg);
+        transition: transform 0.25s ease;
+        background-color: var(--color-hover-btn);
+    }
     /*Texts*/
     .portfolio p{
         font-size: 20px;
@@ -1570,6 +1647,7 @@ footer a{
         width: 20%;
         &:hover{
             box-shadow: 0 5px 9px #FFFFFF;
+            transition: 0.3s ease;
         }
     }
     .portfolio .carte.left-2, .portfolio .carte.right-2 {

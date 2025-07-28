@@ -1,0 +1,36 @@
+{
+  "images": [
+    {
+      "id": 0,
+      "url": "assets/images/design_fiction/joie.png"
+    },
+    {
+      "id": 1,
+      "url": "assets/images/design_fiction/surprise.png"
+    },
+    {
+      "id": 2,
+      "url": "assets/images/design_fiction/degout.png"
+    },
+    {
+      "id": 3,
+      "url": "assets/images/design_fiction/emerveille.png"
+    },
+    {
+      "id": 4,
+      "url": "assets/images/design_fiction/satisfait.png"
+    },
+    {
+      "id": 5,
+      "url": "assets/images/design_fiction/desir.png"
+    },
+    {
+      "id": 6,
+      "url": "assets/images/design_fiction/calme.png"
+    },
+    {
+      "id": 7,
+      "url": "assets/images/design_fiction/horreur.png"
+    }
+  ]  
+}

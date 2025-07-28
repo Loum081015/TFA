@@ -18,34 +18,59 @@
 <body class="design_fiction">
     <header class="grid header">
         <nav class="nav">
-            <a href="index.html"  class="header__btn--accueil">
-                    <img class="logo" src="assets/images/logo_blanc.png" alt="logo de l'app design fiction, un oeil multicolore">
-            </a>
+            <div class="nav__top">
+                <a href="index.html"  class="nav__top--img">
+                    <img class="nav__img" src="assets/images/logo_blanc.png" alt="logo projet janus">
+                </a>
+                <button id="burgerBtn" class="nav__btn">
+                    <span class="nav__line"></span>
+                    <span class="nav__line"></span>
+                    <span class="nav__line"></span>
+                </button>
+            </div>
+            <ul class="nav__menu"  id="burgerMenu">
+                <li class="nav__item"><a class="nav__link" href="index.html#header">Portfolio</a></li> 
+                <li class="nav__item dropdown">
+                    <button class="dropbtn ">Projets 
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="janus.html">Janus</a>
+                        <a  href="dataplay.html">Dataplay</a>
+                        <a href="design_fiction.html">Design fiction</a>
+                        <a href="/projets/phrase1/">Les phrases</a>
+                    </div>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="index.html#section2">Skills</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#section3">Contact</a></li>
+            </ul>
         </nav>
-        <h1 class="mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end8 pgrid-start1 pgrid-end10">Et si nos émotions étaient visibles ?</h1>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Et si nos émotions pouvaient être vues comme un language visuel ?</p>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Cette lentille connectée affiche ce que vous ressentez ou décidez de partager.
-        Une technologie entre intimité, expression et transparence.
+        <h1 class="mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end8 pgrid-start1 pgrid-end10">Iris-isstible</h1>
+        <h2 class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Controlez ce que vos yeux révèlent</h2>
+        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Les émotions sont parfois difficiles à gérer ou à montrer. Pourtant nos yeux nous trahissent souvent.
         </p>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Ce projet interroge notre rapport aux émotions, à la transparence et à l'identité dans un monde technologique.</p>
+        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Grâce à Iris-isstible et aux lentilles connectées, vous choisissez ce que vos yeux expriment. L'application vous donne le pouvoir de rester maître de votre image émotionnelle.</p>
+        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Plus de controle. Moins de malentendus. une nouvelle manière de communiquer.</p>
+        <img class="connection__header" src="assets/images/design_fiction/connection.jpg"> 
     </header>
     <main>
         <section class="section1">
-            <h2>Fonctionnalités principales</h2>
-            <div class="grid section1__detection">
-               <h3 class="mgrid-start2 mgrid-end6 tgrid-start2 tgrid-end6 pgrid-start2 pgrid-end5">Détection émotionnelle</h3> 
-                <img class="picto detection__picto mgrid-start1 mgrid-end2 tgrid-start1 tgrid-end2 pgrid-start1 pgrid-end2" src="assets/images/design_fiction/heart.png" alt="pictogram d'un coeur">
-                <p class="detection__texte mgrid-start2 mgrid-end6 tgrid-start2 tgrid-end6 pgrid-start2 pgrid-end5">L'émotion émise par l'utilisateur est détectée grâce à des capteurs biométriques internes</p>
-            </div>
-            <div class="grid section1__personnalisation">
-                <h3 class="mgrid-start2 mgrid-end6 tgrid-start4 tgrid-end8 pgrid-start7 pgrid-end10">Mode personnalisable</h3>
-                <img class="picto personnalisation__picto mgrid-start1 mgrid-end2 tgrid-start3 tgrid-end4 pgrid-start6 pgrid-end7" src="assets/images/design_fiction/parametres.png" alt="pictogram d'un humain avec un engrenage">
-                <p class="personnalisation__texte mgrid-start2 mgrid-end6 tgrid-start4 tgrid-end8 pgrid-start7 pgrid-end10">Si l'émotion ne te plaît pas où qu'elle n'est pas la bienvenue, tu pourras également choisir par toi même l'émotion que tu veux transmettre au monde.</p>
-            </div>
-            <div class="grid section1__historique">
-                <h3 class="mgrid-start2 mgrid-end6 tgrid-start2 tgrid-end6 pgrid-start2 pgrid-end5">Historique émotionnel</h3>
-                <img class="picto historique__picto mgrid-start1 mgrid-end2 tgrid-start1 tgrid-end2 pgrid-start1 pgrid-end2" src="assets/images/design_fiction/clock.png" alt="pictogram d'une horloge">
-                <p class="historique__texte mgrid-start2 mgrid-end6 tgrid-start2 tgrid-end6 pgrid-start2 pgrid-end5">Retrouver les émotions que vous avez ressenties durant les derniers mois. Vous pouvez également les réutiliser pour votre émotion du jour.</p>
+            <h2>Les fonctionnalités</h2>
+            <div class="section1__objectif">
+                <div class="section1__objectif--text">
+                    <div class="section1__objectif--titre">
+                        <img class="section1__picto">
+                        <h3>Objectif de l'app</h3>
+                    </div>
+                    <p>Adapter la couleur de la lentille à l'humeur que vous souhaitez partager</p>
+                </div>
+                <div class="section1__objectif--img">
+                    <div class="popup" id="popup1" data-image="img1">
+                        <div class="popup__content">
+                            <img src="assets/images/design_fiction/iris_joie@2x.png" alt=" image d'une lentille jaune/orangée" class="preview-image" data-popup="popup" data-img-src="assets/images/design_fiction/joie.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class=" grid section2">
