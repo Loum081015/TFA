@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
 :root{
     --color-texte-casestudy1:#FFFFFF;
     --color-menu-casestudy1: #FFFFFF; 
@@ -41,6 +42,15 @@
     --color-texte-cartes-designfiction: #FBFCFF;
     --color-background-skills: #222222;
     --color-background-iris: #f3f3f3;
+    --color-designfiction-bienvenue: #FA0000;
+    --color-designfiction-scan:#D86A00;
+    --color-designfiction-connexion:#A8B400;
+    --color-designfiction-choix:#3EB800;
+    --color-designfiction-emotionspositives: #00B884;
+    --color-designfiction-emotions:#009EEA;
+    --color-designfiction-calendrier:#6680FF;
+    --color-designfiction-profil:#9966FF;
+    --color-designfiction-parametres:#CC66FF;
 }
 /*Code commun*/
 *{
@@ -1021,25 +1031,113 @@ footer a{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-/*Cartes design fiction*/
-/*Cartes*/
-.design_fiction .contenu{
-    background-color: var(--color-cartes-designfiction);
-    color: var(--color-texte-cartes-designfiction);
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom:48px ;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-}
-.contenu h4{
-    margin: 16px auto;
-    text-align: center;
-    font-family: 'orbitron';
-}
 .section1{
     margin-bottom: 40px;
+}
+/*Dropdown df*/
+.section2__setup--gros-titre{
+    font-size: 84.7px ;
+    font-family: 'syncopate';
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--color-designfiction-bienvenue), var(--color-designfiction-scan), var(--color-designfiction-connexion), var(--color-designfiction-choix));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+}
+.section2__emotions--gros-titre{
+    font-size: 84.7px ;
+    font-family: 'syncopate';
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--color-designfiction-emotionspositives), var(--color-designfiction-emotions), var(--color-designfiction-calendrier));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+}
+.section2__profil--gros-titre{
+    font-size: 84.7px ;
+    font-family: 'syncopate';
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--color-designfiction-profil), var(--color-designfiction-parametres));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+}
+.dropbtn__application{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: none;
+}
+.design_fiction .section2 h3{
+    font-family: 'syne';
+    margin: 0;
+}
+.section2__fleche{
+    width: 27px;
+    height: 14px;
+    filter: invert(100%);
+    rotate: 90deg;
+    transition: rotate .15s ease-in-out;
+}
+.dropbtn__bienvenue, .dropdown-content__bienvenue{
+    background-color: var(--color-designfiction-bienvenue);
+}
+.dropbtn__scan, .dropdown-content__scan{
+    background-color: var(--color-designfiction-scan);
+}
+.dropbtn__connexion, .dropdown-content__connexion{
+    background-color: var(--color-designfiction-connexion);
+}
+.dropbtn__choix, .dropdown-content__choix{
+    background-color: var(--color-designfiction-choix);
+}
+.dropbtn__emotionspositives, .dropdown-content__emotionspositives{
+    background-color: var(--color-designfiction-emotionspositives);
+}
+.dropbtn__emotions, .dropdown-content__emotions{
+    background-color: var(--color-designfiction-emotions);
+}
+.dropbtn__calendrier, .dropdown-content__calendrier{
+    background-color: var(--color-designfiction-calendrier);
+}
+.dropbtn__profil, .dropdown-content__profil{
+    background-color: var(--color-designfiction-profil);
+}
+.dropbtn__parametres, .dropdown-content__parametres{
+    background-color: var(--color-designfiction-parametres);
+}
+.dropdown-content__section2{
+    margin-bottom:40px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--color-text-header-portfolio);
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease-in-out;
+}
+.design_fiction .section2__img{
+    width: 30%;
+    height: auto;
+    margin-right: 16px;
+    max-height:100% ;
+}
+.dropdown-content__section2 p{
+    margin-top: 0;
+}
+.dpdn-arrow-open img{
+    rotate: 0deg;
 }
 /*Footer*/
 .footer__link{
