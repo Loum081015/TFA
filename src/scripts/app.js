@@ -118,18 +118,7 @@ irisButtons.forEach((button, index) => {
         irisPopupImage?.classList.add('open');
         document.body.classList.add('no-scroll');
         showIrisImage(index);
-    //     if(!irisPopupImage.src.includes(irisJsonData[index].src)) {
-    //         irisPopupImage.src = irisJsonData[index].src;
-    //         irisPopupImage.alt = irisJsonData[index].alt;
-    //         irisPopupImage.classList.add('open');
-    //         document.body.classList.add('no-scroll');
-    //         return;
-    //     }
-
-    //     irisPopupImage.src = '';
-    //     irisPopupImage.alt = '';
-    //     irisPopupImage.classList.remove('open');
-    //     document.body.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
     });
 });
 irisPopupImage?.addEventListener('click', () => {
@@ -148,27 +137,6 @@ function showIrisImage(index) {
 }
 
 
-// images?.forEach((image, index) => {
-//     image.addEventListener('click', () => {
-//         popupImage?.classList.add('open');
-//         document.body.classList.add('no-scroll');
-//         showImage(index);
-//     });
-// });
-// popupImage?.addEventListener('click', () => {
-//     popupImgElement?.classList.remove('open');
-//     popupImgElement?.addEventListener('transitionend', () => {
-//         if(popupImgElement?.classList.contains('open')) return;
-//         popupImage?.classList.remove('open');
-//         document.body.classList.remove('no-scroll');
-//     });
-// });
-// function showImage(index) {
-//     popupImgElement.src = images[index].getAttribute('src');
-//     popupImgElement.classList.add('open');
-//     currentImageIndex = index;
-// }
-
 const button = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 let isOpen = false;
@@ -186,57 +154,6 @@ document.addEventListener('click', (e) => {
         dropdown?.classList.remove('isOpen');
     }
 });
-
-// const buttonsApplication = document.querySelectorAll('.dropbtn__application');
-// const dropdownsApplication = document.querySelectorAll('.dropdown-content__section2');
-
-// buttonsApplication.forEach((btn, index) => {
-//     const dropdown = dropdownsApplication[index];
-
-//     btn.addEventListener('click', () => {
-//         const isDrpdwnOpen = dropdown.classList.contains('dpdn-open');
-
-//         let toClose = 0;
-        
-//         dropdownsApplication.forEach((dpdn, idx) => {
-//             if(!dpdn.classList.contains('dpdn-open')) return;
-
-//             toClose++;
-//             dpdn.style.height = dpdn.scrollHeight + 'px';
-//             dpdn.classList.remove('dpdn-open');
-//             buttonsApplication[idx]?.classList.remove('dpdn-arrow-open');
-
-//             requestAnimationFrame(() => dpdn.style.height = '0px');
-
-//             dpdn.addEventListener('transitionend', function handler() {
-//                 dpdn.removeEventListener('transitionend', handler);
-//                 toClose--;
-//                 if(toClose === 0) openDropdown();
-//             });
-//         });
-
-//         if(toClose == 0) openDropdown();
-
-//         function openDropdown() {
-//             if(!isDrpdwnOpen) {
-//                 btn.classList.add('dpdn-arrow-open');
-//                 dropdown.classList.add('dpdn-open');
-//                 const targetHeight = dropdown.scrollHeight + 'px';
-//                 dropdown.style.height = '0px';
-
-//                 requestAnimationFrame(() => dropdown.style.height = targetHeight);
-                
-//                 dropdown.addEventListener('transitionend', function handler() {
-//                     dropdown.style.height = 'auto';
-//                     dropdown.removeEventListener('transitionend', handler);
-
-//                     const y = btn.getBoundingClientRect().top + window.scrollY - 63;
-//                     window.scrollTo({ top: y, behavior: 'smooth' });
-//                 });
-//             }
-//         }
-//     });
-// });
 
 const buttonsApplication = document.querySelectorAll('.dropbtn__application');
 const dropdownsApplication = document.querySelectorAll('.dropdown-content__section2');
@@ -293,3 +210,46 @@ function openDropdown(btn, dropdown) {
         window.scrollTo({ top: y, behavior: 'smooth' });
     });
 }
+
+/*Slider*/
+let slideIndex = 1;
+const slides = document.getElementsByClassName("section1__slide");
+const prevArrow = document.querySelector(".section1__prev");
+const nextArrow = document.querySelector(".section1__next");
+const dots = document.querySelectorAll(".section1__slider-nav button");
+
+// Fonction pour afficher une slide
+function showSlides(n) {
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+}
+
+// Fonctions pour navigation
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Initialisation
+showSlides(slideIndex);
+
+// Événements flèches
+prevArrow.addEventListener("click", () => plusSlides(-1));
+nextArrow.addEventListener("click", () => plusSlides(1));
+
+// Événements boutons indicateurs
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => currentSlide(index + 1));
+});
+

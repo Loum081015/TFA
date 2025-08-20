@@ -45,78 +45,118 @@
                 <li class="nav__item"><a class="nav__link" href="index.html#section3">Contact</a></li>
             </ul>
         </nav>
-        <h1 class="mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end8 pgrid-start1 pgrid-end10">Iris-isstible</h1>
-        <h2 class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Controlez ce que vos yeux révèlent</h2>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Les émotions sont parfois difficiles à gérer ou à montrer. Pourtant nos yeux nous trahissent souvent.
-        </p>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Grâce à Iris-isstible et aux lentilles connectées, vous choisissez ce que vos yeux expriment. L'application vous donne le pouvoir de rester maître de votre image émotionnelle.</p>
-        <p class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start2 pgrid-end9">Plus de contrôle. Moins de malentendus. une nouvelle manière de communiquer.</p>
-        <img class="connection__header" src="assets/images/design_fiction/connection.jpg"> 
+        <div class=" grid mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end8 pgrid-start1 pgrid-end10">
+            <h1 class="mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end8 pgrid-start1 pgrid-end9">Iris-isstible</h1>
+            <h2 class="mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end7 pgrid-start1 pgrid-end10">Contrôlez ce que vos yeux révèlent</h2>
+            <img class="connection__header mgrid-start2 mgrid-end5 tgrid-start1 tgrid-end4" src="assets/images/design_fiction/emerveille.jpg"> 
+            <div class=" header__text mgrid-start1 mgrid-end6 tgrid-start4 tgrid-end8 pgrid-start5 pgrid-end10">
+                <p>Les émotions sont parfois difficiles à gérer ou à montrer. Pourtant, nos yeux nous trahissent souvent.
+                </p>
+                <p>Grâce à Iris-isstible et aux lentilles connectées, vous choisissez ce que vos yeux expriment. L'application vous donne le pouvoir de rester maître de votre image émotionnelle.</p>
+                <p>Plus de contrôle, moins de malentendus, une nouvelle manière de communiquer.</p>
+            </div>
+        </div>
     </header>
     <main>
         <section class="section1">
             <h2>Les fonctionnalités</h2>
-            <p>Notre application mobile vous permet de modifier en un geste la couleur de votre lentille connectée afin qu’elle reflète votre humeur du moment. Joie, sérénité ou énergie : personnalisez votre regard à tout instant, directement depuis votre smartphone.</p>
-            <div class="section1__objectif">
-                <div class="section1__objectif--text">
-                    <div class="section1__objectif--titre">
-                        <img class="section1__picto">
-                        <h3>Objectif de l'app</h3>
+            <p class="section1__text">Notre application mobile vous permet de modifier en un geste la couleur de votre lentille connectée pour refléter votre humeur. Joie, sérénité ou énergie : personnalisez votre regard à tout instant, directement depuis votre smartphone.</p>
+            <div class="section1__slider">
+                <div class="section1__slide section1__objectif">
+                    <div class="section1__objectif--text">
+                        <div class="section1__objectif--titre">
+                            <img class="section1__picto" src="assets/images/design_fiction/picto_goal.png">
+                            <h3>Objectif de l'app</h3>
+                        </div>
+                        <p>Adapter la couleur de la lentille à l'humeur que vous souhaitez partager.</p>
                     </div>
-                    <p>Adapter la couleur de la lentille à l'humeur que vous souhaitez partager</p>
+                    <div class="section1__objectif--img">
+                        <p>Votre humeur, votre couleur. choisissez !</p>
+                        <div class="buttons__container">
+                            <div class="buttons__container--left">
+                                <button type="button" class="iris__btn iris__btn1">
+                                    <img src="assets/images/design_fiction/iris_joie.png" alt="">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn2">
+                                    <img src="assets/images/design_fiction/iris_surprise.png" alt="">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn3">
+                                    <img src="assets/images/design_fiction/iris_degout.png" alt="pupille de couleur vert foncé">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn4">
+                                    <img src="assets/images/design_fiction/iris_emerveillement.png" alt="pupille de couleur jaune soleil ">
+                                </button>
+                            </div>
+                            <div class="buttons__container--right">
+                                <button type="button" class="iris__btn iris__btn1">
+                                    <img src="assets/images/design_fiction/iris_satisfait.png" alt="pupille de couleur jaune pâle">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn2">
+                                    <img src="assets/images/design_fiction/iris_desir.png" alt="pupille de couleur rose framboise">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn3">
+                                    <img src="assets/images/design_fiction/iris_calme.png" alt="pupille de couleur bleu claire">
+                                </button>
+                                <button type="button" class="iris__btn iris__btn4">
+                                    <img src="assets/images/design_fiction/iris_horrifie.png" alt="pupille de couleur grise">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="popup" id="popup1" data-image="img1">
+                            <div class="popup__content">
+                                <img src="" alt=" image d'une lentille jaune/orangée" class="preview-image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="section1__objectif--img">
-                    <div class="buttons__container">
-                        <div class="buttons__container--left">
-                            <button type="button" class="iris__btn iris__btn1">
-                                <img src="assets/images/design_fiction/iris_joie.png" alt="">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn2">
-                                <img src="assets/images/design_fiction/iris_surprise.png" alt="">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn3">
-                                <img src="assets/images/design_fiction/iris_degout.png" alt="pupille de couleur vert foncé">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn4">
-                                <img src="assets/images/design_fiction/iris_emerveillement.png" alt="pupille de couleur jaune soleil ">
-                            </button>
+                <div class="section1__slide section1__who">
+                    <div class="section1__who--text">
+                        <div class="section1__who--titre">
+                            <img class="section1__picto" src="assets/images/design_fiction/who.png">
+                            <h3>Pour qui ?</h3>
                         </div>
-                        <div class="buttons__container--right">
-                            <button type="button" class="iris__btn iris__btn1">
-                                <img src="assets/images/design_fiction/iris_satisfait.png" alt="pupille de couleur jaune pâle">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn2">
-                                <img src="assets/images/design_fiction/iris_desir.png" alt="pupille de couleur rose framboise">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn3">
-                                <img src="assets/images/design_fiction/iris_calme.png" alt="pupille de couleur bleu claire">
-                            </button>
-                            <button type="button" class="iris__btn iris__btn4">
-                                <img src="assets/images/design_fiction/iris_horrifie.png" alt="pupille de couleur grise">
-                            </button>
-                        </div>
+                        <p>Les personnes sensibles à la communication non verballe, les curieux du futur, les personnes hypersensibles.</p>
                     </div>
-                    <div class="popup" id="popup1" data-image="img1">
-                        <div class="popup__content">
-                            <img src="" alt=" image d'une lentille jaune/orangée" class="preview-image">
-                        </div>
+                    <div class="section1__who--img">
+                        <img class="section1__who--image" src="assets/images/design_fiction/fonctionnalite__calme.jpg"> 
                     </div>
+                </div>
+                <div class="section1__slide section1__fonctionnement">
+                    <div class="section1__fonctionnement--text">
+                        <div class="section1__fonctionnement--titre">
+                            <img class="section1__picto" src="assets/images/design_fiction/fonctionnement.png">
+                            <h3>Fonctionnement</h3>
+                        </div>
+                        <p>La lentille capte, grâce à des capteurs, votre émotion. Grâce à l'app vous pourrez adapter la couleur à votre guise.</p>
+                    </div>
+                    <div class="section1__who--img">
+                        <img class="section1__fonctionnement--image" src="assets/images/design_fiction/fonctionnement_img.jpg"> 
+                    </div>
+                </div>
+                <div class="section1__slider--arrows">
+                    <span class="section1__slider--arrow section1__prev"></span>
+                    <div class="section1__slider-nav">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                    <span class="section1__slider--arrow section1__next"></span>
                 </div>
             </div>
         </section>
         <section class="section2 ">
-            <h2>L'application</h2>
+            <h2 class="section2__titre">L'application</h2>
                 <div class="section2__setup grid">
-                    <p class="section2__setup--gros-titre mgrid-start1 mgrid-end6">SETUP</p>
-                    <div class="section2__setup--dropdown mgrid-start1 mgrid-end6">
+                    <p class="section2__setup--gros-titre mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end2 pgrid-start1 pgrid-end2">SETUP</p>
+                    <div class="section2__setup--dropdown mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end8 pgrid-start2 pgrid-end9 ">
                         <div class="section2__setup--dropdown-bienvenue">
                             <button class="dropbtn__application dropbtn__bienvenue">
                                 <h3>Bienvenue</h3>
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__bienvenue">
-                                <img class="section2__img" src="assets/images/design_fiction/bienvenue.png">
-                                <p class="pgrid-start2 pgrid-end9">Voici la première page de cette application. Sur cette page, vous trouverez un premier bouton qui vous mènera à la page suivante, le scan. Si vous n'avez pas encore de compte vous pourrez également accéder à la création du compte via le lien.</p>
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/bienvenue.jpg">
+                                <p class="pgrid-start2 pgrid-end9">Voici la première page de cette application. Sur celle-ci, vous trouverez un premier bouton qui vous mènera à la page suivante, le scan. Si vous n'avez pas encore de compte vous pourrez également accéder à la création du compte via le lien.</p>
                             </div>
                         </div>
                         <div class="section2__setup--dropdown-scan">
@@ -125,8 +165,8 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__scan">
-                                <img class="section2__img" src="assets/images/design_fiction/scan.png">
-                                <p>Scannez votre iris pour laisser parlez vos émotions.</p>
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/scan.jpg">
+                                <p>Scannez votre iris pour laisser parler vos émotions.</p>
                             </div>
                         </div>
                         <div class="section2__setup--dropdown-connexion">
@@ -135,7 +175,7 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__connexion">
-                                <img src="assets/images/design_fiction/connexion.png">
+                                <img class="section2__img--flechees" src="assets/images/design_fiction/connexion.png">
                             </div>
                         </div>
                         <div class="section2__setup--dropdown-choix">
@@ -144,22 +184,22 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__choix">
-                                <img><!--Image page de choix-->
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/choix.jpg">
                                 <p class="pgrid-start2 pgrid-end9">Ici, vous pourrez choisir le type d'émotion que vous voulez, plutôt positive, plutôt négative ou encore une émotion dite mixte. Vous pourrez également choisir l'émotion via le champ de recherche ou via vos émotions likées.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section2__emotions">
-                    <p class="section2__emotions--gros-titre">FEEL</p>
-                    <div class="section2__emotions--dropdown">
+                <div class="section2__emotions grid">
+                    <p class="section2__emotions--gros-titre mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end2 pgrid-start1 pgrid-end2">FEEL</p>
+                    <div class="section2__emotions--dropdown mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end8 pgrid-start2 pgrid-end9">
                         <div class="section2__emotions--emotionspositives">
                             <button class="dropbtn__application dropbtn__emotionspositives mgrid-start1 mgrid-end6 pgrid-start2 pgrid-end9">
                                 <h3>Émotions positives</h3>
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__emotionspositives">
-                                <img class="dropdown-content__emotionspositives__img" src="assets/images/design_fiction/emotionspositives.png" alt="page des émotions positives avec des flèches explicatives des différentes parties">
+                                <img class="dropdown-content__emotionspositives__img section2__img--flechees" src="assets/images/design_fiction/emotionspositives.png" alt="page des émotions positives avec des flèches explicatives des différentes parties">
                             </div> 
                         </div>
                         <div class="section2__emotions--emotions">
@@ -168,8 +208,8 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__emotions">
-                                <img><!--Image page de émotions-->
-                                <p>Ensuite, sur cette page, vous trouverez  le nom de l'émotion, sa couleur, un descriptif, ainsi qu'une visualisation de votre lentille. Vous trouverez aussi le nombre de fois où cette émotion est apparue dans le mois. Il y a aussi un boutton pour ajouter l'émotion aux favoris et l'autre pour activer.</p>
+                                <img class="dropdown-content__emotions__img section2__img section2__img--gauche" src="assets/images/design_fiction/desir.jpg">
+                                <p>Cette page présente le nom, la couleur et le descriptif de l’émotion.Vous pouvez aussi voir la visualisation de votre lentille et sa fréquence mensuelle. Deux boutons permettent d’ajouter l’émotion aux favoris ou de l’activer.</p>
                             </div> 
                         </div>
                         <div class="section2__emotions--calendrier">
@@ -178,22 +218,22 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__calendrier">
-                                <img><!--Image page de calendrier-->
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/calendrier.jpg">
                                 <p>Retrouvez vos émotions jour après jour.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section2__profil">
-                    <p class="section2__profil--gros-titre">USR</p>
-                    <div class="section2__profil--dropdown">
+                <div class="section2__profil grid">
+                    <p class="section2__profil--gros-titre mgrid-start1 mgrid-end6 tgrid-start1 tgrid-end2 pgrid-start1 pgrid-end2">USR</p>
+                    <div class="section2__profil--dropdown mgrid-start1 mgrid-end6 tgrid-start2 tgrid-end8 pgrid-start2 pgrid-end9">
                         <div class="section2__profil--profil">
                             <button class="dropbtn__application dropbtn__profil mgrid-start1 mgrid-end6 pgrid-start2 pgrid-end9">
                                 <h3>Profil</h3>
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__profil">
-                                <img><!--Image page de profil-->
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/profil.jpg">
                                 <p>Accédez à vos informations rapidement.</p>
                             </div>
                         </div>
@@ -203,16 +243,28 @@
                                 <img class="section2__fleche" src="assets/images/fleche_menu.png">
                             </button>
                             <div class="dropdown-content__section2 dropdown-content__parametres">
-                                <img><!--Image page de paramètres-->
-                                <p>Ici, vous pourrez choisir le type d'émotion que vous voulez, plutôt positive, plutôt négative ou encore une émotion dite mixte. Vous pourrez également choisir l'émotion via le champ de recherche ou via vos émotions likées.</p>
+                                <img class="section2__img section2__img--gauche" src="assets/images/design_fiction/parametres.jpg">
+                                <p>Enfin, vous trouverez une page paramètre. Celle-ci vous permettra de régler des détails de votre compte, vos notifications ou encore de supprimer votre compte. Vous pourrez également rapporter un bug ou encore trouver les conditions d'utilisation.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-        </section> 
+        </section>
+        <div class="section3__projets grid">
+                <h3 class="mgrid-start1 mgrid-end6">Découvrez aussi</h3>
+                <a class="section3__projets--janus mgrid-start1 mgrid-end3 tgrid-start2 tgrid-end4 pgrid-start3 pgrid-end5" href="janus.html">
+                    <img class="section3__projets--janus--img" src="assets/images/portfolio/janus__casestudy.jpg " alt="mockup d'un écran d'ordinateur contenant la page instagram du projet">
+                </a>
+                <a class="section3__projets--dataplay mgrid-start4 mgrid-end6 tgrid-start5 tgrid-end7 pgrid-start6 pgrid-end8" href="dataplay.html">
+                    <img class="section3__projets--dataplay--img" src="assets/images/portfolio/casestudy__dataplay.jpg " alt="mockup du casestudy dataplay">
+                </a>
+            </div>
+            <div class="section4__btn">
+                    <a class="section4__btn--site" href="https://leaperraux.ovh/projets/Dataplay/dist/" target="_blank">Voir le site</a>
+                    <a class="section4__btn--contact" href="https://www.instagram.com/loum_dwt?igsh=MWVmOHRmbzR2MW5zaw==" target="_blank">Me contacter</a>
+            </div>
     </main>
     <footer>
-    <a class="footer__link" href="index.html">Retour au portfolio</a>
     <p>© 2024 Léa Perraux</p>
     <a class="footer__link" href="credits.html">Crédits</a>
 </footer>
