@@ -340,6 +340,9 @@ img{
     text-decoration: none;
     font-family: 'syne';
 }
+.section4__btn--contact{
+    margin: 8px 0;
+}
 .insta__btn{
     margin: 24px auto ;
     width:fit-content;
@@ -411,6 +414,9 @@ footer a{
     color: var(--color-texte-casestudy1);
     font-family: 'syne';
     cursor: pointer;
+}
+.footer__link{
+    margin: 16px 0  8px 0;
 }
 /*Lignes*/
 .section1__title--line{
@@ -875,7 +881,7 @@ footer a{
     width: 100%;
     overflow: hidden;
     box-shadow: 2px 2px 5px rgb(255, 255, 255);
-    margin-top: 40px;
+    margin-top: 20px;
 }
 /*Contact*/
 .contact{
@@ -929,11 +935,16 @@ footer a{
     margin: 20px;
 }
 /*Titres et textes*/
-.design_fiction h3{
+.design_fiction h3, .h3{
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 0;
     font-family: 'orbitron';
+}
+.dropbtn__application{
+    font-family: 'syne';
+    font-size: 18px;
+    font-weight: bold;
 }
 .design_fiction h2{
     margin-bottom: 40px;
@@ -950,10 +961,11 @@ footer a{
     font-family: 'syne';
 }
 .design_fiction .section1 p{
-    margin-top: 8px;
+    margin-top: 16px;
 }
 .design_fiction .section1__objectif--img p{
     margin-top: 20px;
+    text-align: center;
 }
 .design_fiction .head{
     display: flex;
@@ -971,7 +983,7 @@ footer a{
     margin-bottom: 40px;
 }
 .design_fiction .section3__projets{
-    margin: 80px 40px;
+    margin: 80px 40px 20px 40px;
 }
 .design_fiction .section3__projets h3{
     margin: 0 20px;
@@ -980,21 +992,27 @@ footer a{
 /*slider*/
 .design_fiction .section1__slide{
     display: none;
+    height: 350px;
 }
 .design_fiction .section1__slider--arrows{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px ;
+    margin-top: 16px;
 }
 .design_fiction .section1__slider--arrow{
-    background-image: url('../assets/images/fleche_menu.png');
     display: block;
     width: 40px;
     height: 40px;
     user-select: none;
     cursor: pointer;
     background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 50px;
+
+}
+.design_fiction .section1__slider--arrow img{
+    filter: brightness(0) saturate(100%) invert(9%) sepia(15%) saturate(6300%) hue-rotate(227deg) brightness(95%) contrast(105%);
 }
 .design_fiction .section1__prev{
     transform: rotate(-90deg);
@@ -1012,12 +1030,12 @@ footer a{
     height: 20px; 
     width: 20px; 
     border-radius: 50%; 
-    border: 1px solid #ccc; 
+    border: 1px solid #ffffff; 
     margin: 0 5px; 
     background-color: transparent;
 }
 .section1__slider-nav button.active {
-    background-color: #333;
+    background-color: #ffffff;
 }
 /*Images*/
 .picto{
@@ -1075,6 +1093,7 @@ footer a{
 }
 .design_fiction .section1__text{
     margin-bottom: 60px;
+    text-align: center;
 }
 .design_fiction .section2__titre{
     margin-top: 60px;
@@ -1119,6 +1138,10 @@ footer a{
 .section1__who--img{
     margin-top: 16px;
     width: 100%;
+}
+.section1__fonctionnement--img{
+    width: 80%;
+    margin: 16px auto 0 auto ;
 }
 .buttons__container{
     display: flex;
@@ -1178,7 +1201,7 @@ footer a{
 }
 /*Dropdown df*/
 .section2__setup--gros-titre{
-    font-size: 18vw ;
+    font-size: 18vw;
     font-family: 'syncopate';
     font-weight: bold;
     background: linear-gradient(90deg, var(--color-designfiction-bienvenue), var(--color-designfiction-scan), var(--color-designfiction-connexion), var(--color-designfiction-choix));
@@ -1187,7 +1210,7 @@ footer a{
     -webkit-text-fill-color: transparent;
     color: transparent;
     text-align: center;
-    margin-top: 0;
+    margin: 0;
 }
 .section2__emotions--gros-titre{
     font-size: 18vw;
@@ -1358,8 +1381,8 @@ footer a{
         margin-bottom: 80px;
     }
     .design_fiction .section1__who--img{
-        width:80%;
-        margin: 16px auto;
+        width:60%;
+        margin: 16px auto 0 auto;
         display: block;
     }
     /*DF*/
@@ -1368,6 +1391,13 @@ footer a{
     }
     .buttons__container--left, .buttons__container--right{
         width: 30%;
+    }
+    .design_fiction .section1__slider--arrows{
+        justify-content: space-around;
+    }
+    .section1__fonctionnement--img{
+        width: 80%;
+        margin: 16px auto 0 auto ;
     }
 }
 
@@ -1571,6 +1601,10 @@ footer a{
     }
     .section4__btn{
         justify-content: space-around;
+        margin-bottom: 16px;
+    }
+    .design_fiction .section1__text{
+    text-align: justify;
     }
     /*Img*/
     .picto{
@@ -1604,7 +1638,7 @@ footer a{
         width: 15vw;
     }
     .buttons__container{
-        margin-top: 0;
+        margin-top: 16px;
     }
     .section1__objectif{
         min-height: 300px;
@@ -1629,6 +1663,9 @@ footer a{
     .section3__projets--dataplay, .section3__projets--janus, .section3__projets--designfiction{
         margin-top: 40px;
     }
+    .section3__projets--design-fiction{
+        margin-top: 35px;
+    }
     /*Gros titre df*/
     .section2__setup--gros-titre {
         writing-mode: sideways-lr;
@@ -1640,7 +1677,8 @@ footer a{
         color: transparent;
         font-size: 10vw;
         text-align: end;
-        margin-top: 0;
+        margin:0;
+        box-sizing: border-box;
     }
     .section2__profil--gros-titre{
         writing-mode: sideways-lr;
@@ -1676,7 +1714,22 @@ footer a{
         margin-top: 0px;
         margin-bottom: 8px;
     }
-    
+    .design_fiction .section1__slide{
+        height: fit-content;
+    }
+    .section1__objectif--img{
+        margin: 0px auto 32px auto;
+    }
+    .section1__who--img{
+        width: 50%;
+        margin: 16px auto 0 auto ;
+    }
+    .section1__fonctionnement--img{
+        width: 40%;
+    }
+    .design_fiction .section1__slider--arrows{
+        justify-content: space-around;
+    }
     /*Portfolio*/
     /*Cartes*/
     .portfolio .carte{
@@ -2072,16 +2125,22 @@ footer a{
         padding: 32px;
     }
     .section2__setup--gros-titre{
-        font-size: 9vw;
+        font-size: 6.9vw;
+        transition: font-size 0.2s ease;
     }
     .section2__emotions--gros-titre{
-        font-size: 8.5vw;
+        font-size: 6.5vw;
+        transition: font-size 0.2s ease;
     }
     .section2__profil--gros-titre{
-        font-size: 6.5vw;
+        font-size: 5vw;
+        transition: font-size 0.2s ease;
     }
     .design_fiction .section2 h3{
         font-size: 24px;
+    }
+    .section4__btn--site, .section4__btn--contact{
+        font-size: 20px;
     }
     /*Portfolio*/
     /*Icones*/
